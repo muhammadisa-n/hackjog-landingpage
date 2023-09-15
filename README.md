@@ -1,6 +1,6 @@
 # hackgov-landingpage
 
-[Design Figma ](htttps://code.visualstudio.com/)
+[Design Figma](https://code.visualstudio.com/)
 
 ## Recommended IDE Setup
 
