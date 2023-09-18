@@ -1,14 +1,11 @@
-# hackgov-landingpage
+# Hackgov-landingpage
 
-[Design Figma](https://code.visualstudio.com/)
+[Design Figma](#)
 
-## Recommended IDE Setup
+### Usage
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
-
-## Customize configuration
-
-See [Vite Configuration Reference](https://vitejs.dev/config/).
+## Clone Repo
+`git clone https://github.com/muhammadisa226/crime-detection-api`
 
 ## Project Setup
 
