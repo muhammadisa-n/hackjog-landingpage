@@ -2,7 +2,7 @@
 
 ### Design LandingPage
 
-[Design Figma](#)
+[Design Figma](https://tailwindcss.com/docs/guides/vite#)
 
 # Usage
 
@@ -14,24 +14,23 @@
 ```sh
 npm install
 ```
-#### if you using tailwindcss remove this line on the main.js:
-```sh
-import "bootstrap/dist/css/bootstrap.min.css"
-import "bootstrap"
-```
+#### if you using tailwindcss remove this line on the src/main.js
+
+`import "bootstrap/dist/css/bootstrap.min.css"`
+`import "bootstrap"`
+
 
 ### See More Configuration for if using tailwindcss
 
-[Tailwindcss]('https://tailwindcss.com/docs/guides/vite')
+[Tailwindcss](https://tailwindcss.com/docs/guides/vite)
 
+### Configure use bootstrap remove this line in src/main.js
 
-### using another option is bootstrap in this project using v.5.3.2
-[Bootstrap](`https://getbootstrap.com/docs/5.3/getting-started/vite/#configure-vite`)
-### remove this line in main.js:
-```import './assets/tailwind.css'```
-
+`import './assets/tailwind.css'`
 
 ### See More Configuration for if using Bootstrap
+[Bootstrap](https://getbootstrap.com/docs/5.3/getting-started/vite/#configure-vite`)
+
 ### Compile and Hot-Reload for Development
 
 ```sh
