@@ -17,6 +17,7 @@ npm install
 #### if you using tailwindcss remove this line on the src/main.js
 
 `import "bootstrap/dist/css/bootstrap.min.css"`
+` `
 `import "bootstrap"`
 
 
