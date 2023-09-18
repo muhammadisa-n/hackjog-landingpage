@@ -2,12 +2,12 @@
 
 [Design Figma](#)
 
-### Usage
+# Usage
 
-## Clone Repo
+### Clone Repo
 `git clone https://github.com/muhammadisa226/crime-detection-api`
 
-## Project Setup
+### Project Setup
 
 ```sh
 npm install
