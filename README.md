@@ -14,7 +14,7 @@
 ```sh
 npm install
 ```
-#### if you using tailwindcss remove this line on the src/main.js
+#### if you using tailwindcss, remove this line on the src/main.js
 
 &nbsp;`import "bootstrap/dist/css/bootstrap.min.css"`<br>
 &nbsp;`import "bootstrap"`<br>
@@ -25,7 +25,7 @@ npm install
 
 [Tailwindcss](https://tailwindcss.com/docs/guides/vite)
 
-### Configure use bootstrap remove this line in src/main.js
+### if you  use bootstrap, remove this line in src/main.js
 
 `import './assets/tailwind.css'`
 
