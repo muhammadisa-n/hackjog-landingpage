@@ -29,6 +29,7 @@ import "bootstrap"
 [Bootstrap]('https://getbootstrap.com/docs/5.3/getting-started/vite/#configure-vite')
 ### remove this line in main.js:
 ```import './assets/tailwind.css'```
+```import './assets/tailwind.css'```
 
 
 ### See More Configuration for if using Bootstrap
