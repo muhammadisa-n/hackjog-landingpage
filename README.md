@@ -26,10 +26,12 @@ import "bootstrap"
 
 
 ### using another option is bootstrap in this project using v.5.3.2
+[Bootstrap]('https://getbootstrap.com/docs/5.3/getting-started/vite/#configure-vite')
 ### remove this line in main.js:
 ```import './assets/tailwind.css'```
-[Bootstrap V.5.3.2]('https://getbootstrap.com/docs/5.3/getting-started/vite/#configure-vite')
 
+
+### See More Configuration for if using Bootstrap
 ### Compile and Hot-Reload for Development
 
 ```sh
