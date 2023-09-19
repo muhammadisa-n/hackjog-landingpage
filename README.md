@@ -2,7 +2,7 @@
 
 ### Design LandingPage
 
-[Design Figma](https://tailwindcss.com/docs/guides/vite#)
+[Design Figma](https://www.figma.com/file/MhvOncNyYjAgJmu9HudJUG/Frontend-Hackjog-(Magang)?type=design&node-id=0-1&mode=design&t=penbCLviHnIJR4gu-0)
 
 # Usage
 
