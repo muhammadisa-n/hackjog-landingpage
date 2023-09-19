@@ -21,7 +21,7 @@ npm install
 
 
 
-### See More Configuration for if using tailwindcss
+### See More Configuration for Tailwindcss
 
 [Tailwindcss](https://tailwindcss.com/docs/guides/vite)
 
@@ -29,7 +29,7 @@ npm install
 
 `import './assets/tailwind.css'`
 
-### See More Configuration for if using Bootstrap
+### See More Configuration for Bootstrap
 [Bootstrap](https://getbootstrap.com/docs/5.3/getting-started/vite/#configure-vite`)
 
 ### Compile and Hot-Reload for Development
