@@ -19,24 +19,6 @@ git clone https://github.com/muhammadisa226/hackgov-landingpage.git
 ```sh
 npm install
 ```
-#### if you using tailwindcss, remove this line on the src/main.js
-
-&nbsp;`import "bootstrap/dist/css/bootstrap.min.css"`<br>
-&nbsp;`import "bootstrap"`<br>
-
-
-
-### See More Configuration for Tailwindcss
-
-[Tailwindcss](https://tailwindcss.com/docs/guides/vite)
-
-### if you  use bootstrap, remove this line in src/main.js
-
-`import './assets/tailwind.css'`
-
-### See More Configuration for Bootstrap
-[Bootstrap](https://getbootstrap.com/docs/5.3/getting-started/vite/#configure-vite`)
-
 ### Compile and Hot-Reload for Development
 
 ```sh
