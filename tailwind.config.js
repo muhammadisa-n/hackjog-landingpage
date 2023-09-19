@@ -5,7 +5,23 @@ module.exports = {
     "./src/**/*.{vue,js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+     container: {
+      center: true,
+      padding: "16px",
+    },
+    extend: {
+      fontFamily: {
+        monserrat: ["Montserrat", "sans-serif"],
+        pacifico: ["Pacifico", "cursive"],
+        inter: ["Inter", "sans-serif"],
+      },
+      colors: {
+        primary : '#4A3BB9',
+      },
+      screens: {
+        "2xl": "1320px",
+      },
+    },
   },
   plugins: [],
 }

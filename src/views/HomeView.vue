@@ -1,6 +1,4 @@
 <template>
-    <h1>Hello, world!</h1>
-    <h2>Hello World tes 2</h2>
 </template>
 <script setup>
 </script>
