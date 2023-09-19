@@ -7,7 +7,10 @@
 # Usage
 
 ### Clone Repo
-`git clone https://github.com/muhammadisa226/hackgov-landingpage.git`
+
+```sh
+git clone https://github.com/muhammadisa226/hackgov-landingpage.git
+```
 
 ### Project Setup
 
