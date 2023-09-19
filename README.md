@@ -13,7 +13,11 @@
 ```sh
 git clone https://github.com/muhammadisa226/hackgov-landingpage.git
 ```
+### OR clone Repo another branch
 
+```sh
+git clone -b <namebranch> https://github.com/muhammadisa226/hackgov-landingpage.git
+```
 ### Project Setup
 
 ```sh
