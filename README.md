@@ -7,7 +7,7 @@
 # Usage
 
 ### Clone Repo
-`git clone https://github.com/muhammadisa226/crime-detection-api`
+`git clone https://github.com/muhammadisa226/hackgov-landingpage.git`
 
 ### Project Setup
 
