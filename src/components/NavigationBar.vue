@@ -5,15 +5,15 @@
     <div class="container">
       <div class="flex items-center justify-between relative">
         <div class="px-4">
-          <a
-            href="#home"
+          <RouterLink
+            :to="{ name: 'home' }"
             class="font- font-monserrat text-lg text-white block py-6"
             ><img
               src="../assets/images/logo.png"
               class="h-8 mr-3"
               alt="Hackgov Logo"
             />
-          </a>
+          </RouterLink>
         </div>
         <div class="flex items-center px-4">
           <button
@@ -55,15 +55,48 @@
                 </a>
               </li>
               <li class="group">
+                <a
+                  href="#"
+                  class="lg:hidden text-base font-monserrat font-semibold text-white py-2 mx-8 flex lg:group-hover:border-b-[3px] lg:group-hover:divide-x-[3px] lg:group-hover:divide-white"
+                >
+                  Event
+                </a>
+              </li>
+              <li class="group">
+                <a
+                  href="#"
+                  class="lg:hidden text-base font-monserrat font-semibold text-white py-2 mx-8 flex lg:group-hover:border-b-[3px] lg:group-hover:divide-x-[3px] lg:group-hover:divide-white"
+                >
+                  Speaker
+                </a>
+              </li>
+              <li class="group">
+                <a
+                  href="#"
+                  class="lg:hidden text-base font-monserrat font-semibold text-white py-2 mx-8 flex lg:group-hover:border-b-[3px] lg:group-hover:divide-x-[3px] lg:group-hover:divide-white"
+                >
+                  Schedule
+                </a>
+              </li>
+              <li class="group">
+                <a
+                  href="#"
+                  class="lg:hidden text-base font-monserrat font-semibold text-white py-2 mx-8 flex lg:group-hover:border-b-[3px] lg:group-hover:divide-x-[3px] lg:group-hover:divide-white"
+                >
+                  Venue
+                </a>
+              </li>
+              <!-- navbar not mobile  -->
+              <li class="group">
                 <button
                   id="dropdownDefaultButton"
                   data-dropdown-toggle="dropdown"
-                  class="text-white font-semibold rounded-lg text-base mx-8 py-2 text-center inline-flex items-center"
+                  class="hidden text-white font-semibold rounded-lg text-base mx-8 py-2 text-center lg:inline-flex items-center"
                   type="button"
                 >
                   Event
                   <svg
-                    class="w-2.5 h-2.5 ml-2.5"
+                    class="w-2.5 h-2.5 ml-2.5 hidden lg:block"
                     aria-hidden="true"
                     xmlns="http://www.w3.org/2000/svg"
                     fill="none"
@@ -136,9 +169,6 @@
 </template>
 
 <script setup>
-import { useDark, useToggle } from "@vueuse/core";
-const isDark = useDark();
-const toggledark = useToggle(isDark);
 import { RouterLink } from "vue-router";
 const openmenu = () => {
   document.querySelector("#hamburger").classList.toggle("hamburger-active");
