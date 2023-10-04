@@ -3,15 +3,14 @@
     <div>
       <swiper
         :modules="modules"
-        :space-between="20"
         :loop="true"
         :autoplay="{
           delay: 2000,
           disableOnInteraction: false,
         }"
       >
-        <swiper-slide v-for="text in dataImage" :key="text.title">
-          <img :src="text.img" alt="" class="w-full" />
+        <swiper-slide v-for="data in dataImage" :key="data.title">
+          <img :src="data.img" :alt="data.title" class="w-full" />
         </swiper-slide>
       </swiper>
     </div>
@@ -30,19 +29,19 @@ export default {
     const dataImage = ref([
       {
         title: "image 1",
-        img: "home1.png",
+        img: new URL("@/assets/images/home/home1.png", import.meta.url).href,
       },
       {
         title: "image 2",
-        img: "home2.png",
+        img: new URL("@/assets/images/home/home2.png", import.meta.url).href,
       },
       {
         title: "image 3",
-        img: "home3.png",
+        img: new URL("@/assets/images/home/home3.png", import.meta.url).href,
       },
       {
         title: "image 4",
-        img: "home4.png",
+        img: new URL("@/assets/images/home/home4.png", import.meta.url).href,
       },
     ]);
     return { modules: [Pagination, Autoplay], dataImage };

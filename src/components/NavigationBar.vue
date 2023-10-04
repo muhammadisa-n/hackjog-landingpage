@@ -176,9 +176,10 @@ export default {
       document.querySelector("#hamburger").classList.toggle("hamburger-active");
       document.querySelector("#nav-menu").classList.toggle("hidden");
     };
+
     return { openmenu };
   },
 };
 </script>
 
-<style lang="scss" scoped></style>
+<style scoped></style>
