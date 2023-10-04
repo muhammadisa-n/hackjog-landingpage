@@ -8,11 +8,7 @@
           <RouterLink
             :to="{ name: 'home' }"
             class="font- font-monserrat text-lg text-white block py-6"
-            ><img
-              src="../assets/images/logo.png"
-              class="h-8 mr-3"
-              alt="Hackgov Logo"
-            />
+            ><img src="logo.png" class="h-8 mr-3" alt="Hackgov Logo" />
           </RouterLink>
         </div>
         <div class="flex items-center px-4">
@@ -48,7 +44,7 @@
               </li>
               <li class="group">
                 <a
-                  href="#"
+                  href="#about"
                   class="text-base font-monserrat font-semibold text-white py-2 mx-8 flex lg:group-hover:border-b-[3px] lg:group-hover:divide-x-[3px] lg:group-hover:divide-white"
                 >
                   About
@@ -56,7 +52,7 @@
               </li>
               <li class="group">
                 <a
-                  href="#"
+                  href="#event"
                   class="lg:hidden text-base font-monserrat font-semibold text-white py-2 mx-8 flex lg:group-hover:border-b-[3px] lg:group-hover:divide-x-[3px] lg:group-hover:divide-white"
                 >
                   Event
@@ -64,7 +60,7 @@
               </li>
               <li class="group">
                 <a
-                  href="#"
+                  href="#speaker"
                   class="lg:hidden text-base font-monserrat font-semibold text-white py-2 mx-8 flex lg:group-hover:border-b-[3px] lg:group-hover:divide-x-[3px] lg:group-hover:divide-white"
                 >
                   Speaker
@@ -72,7 +68,7 @@
               </li>
               <li class="group">
                 <a
-                  href="#"
+                  href="#schedule"
                   class="lg:hidden text-base font-monserrat font-semibold text-white py-2 mx-8 flex lg:group-hover:border-b-[3px] lg:group-hover:divide-x-[3px] lg:group-hover:divide-white"
                 >
                   Schedule
@@ -80,7 +76,7 @@
               </li>
               <li class="group">
                 <a
-                  href="#"
+                  href="#venue"
                   class="lg:hidden text-base font-monserrat font-semibold text-white py-2 mx-8 flex lg:group-hover:border-b-[3px] lg:group-hover:divide-x-[3px] lg:group-hover:divide-white"
                 >
                   Venue
@@ -146,7 +142,7 @@
               </li>
               <li class="group">
                 <a
-                  href="#"
+                  href="#contact"
                   class="text-base font-monserrat font-semibold text-white py-2 mx-8 flex lg:group-hover:border-b-[3px] lg:group-hover:divide-x-[3px] lg:group-hover:divide-white"
                 >
                   Contact
@@ -154,7 +150,7 @@
               </li>
               <li class="mt-3 lg:mt-0 flex items-center pl-8">
                 <button
-                  @click=""
+                  @click="$router.push('registration')"
                   class="bg-white rounded-full text-primary font-semibold px-2 py-2"
                 >
                   Registration
@@ -168,11 +164,16 @@
   </header>
 </template>
 
-<script setup>
+<script>
 import { RouterLink } from "vue-router";
-const openmenu = () => {
-  document.querySelector("#hamburger").classList.toggle("hamburger-active");
-  document.querySelector("#nav-menu").classList.toggle("hidden");
+export default {
+  setup() {
+    const openmenu = () => {
+      document.querySelector("#hamburger").classList.toggle("hamburger-active");
+      document.querySelector("#nav-menu").classList.toggle("hidden");
+    };
+    return { openmenu };
+  },
 };
 </script>
 
