@@ -8,7 +8,11 @@
           <RouterLink
             :to="{ name: 'home' }"
             class="font- font-monserrat text-lg text-white block py-6"
-            ><img src="logo.png" class="h-8 mr-3" alt="Hackgov Logo" />
+            ><img
+              src="../assets/images/logo.png"
+              class="h-8 mr-3"
+              alt="Hackgov Logo"
+            />
           </RouterLink>
         </div>
         <div class="flex items-center px-4">

@@ -5,8 +5,8 @@
 </template>
 <script>
 import NavigationBar from "../components/NavigationBar.vue";
-import HomeSection from "../components/layouts/Home.vue";
-import AboutSection from "../components/layouts/About.vue";
+import HomeSection from "../layouts/Home.vue";
+import AboutSection from "../layouts/About.vue";
 export default {
   components: { NavigationBar, HomeSection, AboutSection },
   setup() {

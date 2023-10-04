@@ -4,7 +4,7 @@
 </template>
 <script>
 import NavigationBar from "../components/NavigationBar.vue";
-import Register from "../components/layouts/Register.vue";
+import Register from "../layouts/Register.vue";
 export default {
   components: { NavigationBar, Register },
   setup() {

@@ -39,7 +39,7 @@
               target="_blank"
               class="w-9 h-9 mr-3 rounded-full flex justify-center items-center border border-slate-300 hover:border-primary hover:bg-primary hover:text-white"
             >
-              <img src="x.png" width="20" alt="" />
+              <img src="../assets/images/x.png" width="20" alt="" />
             </a>
             <!-- {{-- Instagram logo --}} -->
             <a
@@ -47,7 +47,7 @@
               target="_blank"
               class="w-9 h-9 mr-3 rounded-full flex justify-center items-center border border-slate-300 hover:border-primary hover:bg-primary hover:text-white"
             >
-              <img src="instagram.png" width="20" alt="" />
+              <img src="../assets/images/instagram.png" width="20" alt="" />
             </a>
             <!-- {{-- Youtube logo --}} -->
             <a
@@ -55,7 +55,7 @@
               target="_blank"
               class="w-9 h-9 mr-3 rounded-full flex justify-center items-center border border-slate-300 hover:border-primary hover:bg-primary hover:text-white"
             >
-              <img src="youtube.png" width="20" alt="" />
+              <img src="../assets/images/youtube.png" width="20" alt="" />
             </a>
           </div>
         </div>
