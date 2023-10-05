@@ -1,5 +1,5 @@
 <template>
-    <footer class="bg-primary ">
+    <footer class="bg-gradient-to-b from-primary to-gradasi">
         <div class="mx-auto w-full p-14 ">
             <div class=" mb-6 md:mb-0">
                 <a href="#">
@@ -14,10 +14,25 @@
                     melalui Artificial Intelligence. </span>
                 <ul class="flex ">
                     <li>
-                        <a href="#" class="mr-4 md:mr-6">twitter</a>
+                        <a href="#"> 
+                            <img src="../assets/images/instagram-white.png" alt="Instagram Hackjog" 
+                            class= "w-6 h-6 mr-3 flex justify-center items-center  hover:bg-primary"> 
+                        </a>
                     </li>
                     <li>
-                        <a href="#" class="mr-4 ">Facebook</a>
+                        <a href="#"> 
+                            <img src="../assets/images/twitter-white.png" alt="Twitter Hackjog" class= "w-6 h-6 mr-3 flex justify-center items-center  hover:bg-primary"> 
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#"> 
+                            <img src="../assets/images/youtube.png" alt="Youtube Hackjog" class="h-6"> 
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" >
+                            <img src="" alt="">
+                        </a>
                     </li>
                 </ul>
             </div>
