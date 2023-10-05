@@ -2,7 +2,7 @@
   <NavigationBar />
   <HomeSection />
   <AboutSection />
-  <FooterBar/>
+  <FooterBar />
 </template>
 <script>
 import NavigationBar from "../components/NavigationBar.vue";
