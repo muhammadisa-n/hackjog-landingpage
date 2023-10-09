@@ -26,7 +26,7 @@
                     </li>
                     <li>
                         <a href="#"> 
-                            <img src="../assets/images/youtube.png" alt="Youtube Hackjog" class="h-6"> 
+                            <img src="../assets/images/youtube-putih.png" alt="Youtube Hackjog" class="h-6"> 
                         </a>
                     </li>
                     <li>

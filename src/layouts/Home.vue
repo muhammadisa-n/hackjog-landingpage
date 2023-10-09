@@ -29,19 +29,19 @@ export default {
     const dataImage = ref([
       {
         title: "image 1",
-        img: new URL("@/assets/images/home/home1.png", import.meta.url).href,
+        img: new URL("@/assets/images/home/banner1.jpg", import.meta.url).href,
       },
       {
         title: "image 2",
-        img: new URL("@/assets/images/home/home2.png", import.meta.url).href,
+        img: new URL("@/assets/images/home/banner2.png", import.meta.url).href,
       },
       {
         title: "image 3",
-        img: new URL("@/assets/images/home/home3.png", import.meta.url).href,
+        img: new URL("@/assets/images/home/banner3.png", import.meta.url).href,
       },
       {
         title: "image 4",
-        img: new URL("@/assets/images/home/home4.png", import.meta.url).href,
+        img: new URL("@/assets/images/home/banner4.png", import.meta.url).href,
       },
     ]);
     return { modules: [Pagination, Autoplay], dataImage };
