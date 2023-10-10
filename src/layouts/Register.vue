@@ -1,15 +1,17 @@
 <template>
-  <section id="about" class="pt-16 pb-32 lg:pt-36 max-h-screen">
+  <section id="about" class="pt-48 pb-32 lg:pt-48 bg-cover bg-no-repeat" 
+  style="
+    background-image: url(../../src/assets/images/Bg_Rg.png);
+    background-position: center top -30px;
+    
+  ">
     <div class="container">
       <div class="w-full px-4">
         <div class="max-w-xl mx-auto text-center mb-16">
-          <h4 class="font-semibold text-lg text-primary mb-2 uppercase">
-            Registration Form
-          </h4>
           <h2
-            class="font-bold text-dark text-3xl mb-4 sm:text-4xl lg:text-5xl dark:text-white"
+            class="font-bold text-white text-3xl mb-4 sm:text-4xl lg:text-5xl dark:text-white"
           >
-            Registration
+            REGISTRATION
           </h2>
         </div>
       </div>
