@@ -1,5 +1,5 @@
 <template>
-  <section id="about" class="pt-16 pb-32 lg:pt-36 max-h-screen">
+  <section id="about" class="pt-16 pb-36 lg:pt-36 max-h-screen">
     <div class="container">
       <div class="flex flex-wrap">
         <div class="w-full px-4 mb-10 lg:w-1/2">
@@ -17,7 +17,7 @@
             </div>
           </div>
         </div>
-        <div class="w-full px-4 lg:w-1/2 mt-1">
+        <div class="w-full px-4 lg:w-1/2 mb-12">
           <h4 class="font-semibold font-monserrat text-primary text-lg mb-3">
             What is a HackJog event?
           </h4>
@@ -29,7 +29,7 @@
             industri digital serta transformasi masyarakat melalui Artificial
             Intelligence.
           </p>
-          <div class="flex items-center dark:text-white mt-3">
+          <div class="flex items-center dark:text-white mt-3 mb-12">
             <h4 class="font-semibold font-monserrat text-primary text-lg mr-5">
               Follow
             </h4>
