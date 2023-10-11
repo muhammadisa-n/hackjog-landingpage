@@ -56,33 +56,55 @@
         <input
           type="text"
           id="large-input"
-          class="block w-full p-4 text-black border border-gray-300 rounded-lg bg-gray-100 sm:text-md focus:ring-purple-500 placeholder-black mb-4"
+          class="block w-full p-4 text-black border border-gray-300 rounded-lg bg-gray-100 sm:text-md focus:ring-purple-500 placeholder-black mb-8"
           placeholder="Email / Username"
         />
         <input
           type="text"
           id="large-input"
-          class="block w-full p-4 text-black border border-gray-300 rounded-lg bg-gray-100 sm:text-md focus:ring-purple-500 placeholder-black mb-4"
+          class="block w-full p-4 text-black border border-gray-300 rounded-lg bg-gray-100 sm:text-md focus:ring-purple-500 placeholder-black mb-8"
           placeholder="Email / Username"
         />
         <input
           type="text"
           id="large-input"
-          class="block w-full p-4 text-black border border-gray-300 rounded-lg bg-gray-100 sm:text-md focus:ring-purple-500 placeholder-black mb-4"
+          class="block w-full p-4 text-black border border-gray-300 rounded-lg bg-gray-100 sm:text-md focus:ring-purple-500 placeholder-black mb-8"
           placeholder="Email / Username"
         />
         <input
           type="text"
           id="large-input"
-          class="block w-full p-4 text-black border border-gray-300 rounded-lg bg-gray-100 sm:text-md focus:ring-purple-500 placeholder-black mb-4"
+          class="block w-full p-4 text-black border border-gray-300 rounded-lg bg-gray-100 sm:text-md focus:ring-purple-500 placeholder-black mb-8"
           placeholder="Email / Username"
         />
+        <select id="countries" class="block w-full mb-8 p-4 bg-gray-100 border border-gray-300 text-black text-md rounded-lg focus:ring-purple-500 focus:border-purple-500">
+          <option>United States</option>
+          <option>Canada</option>
+          <option>France</option>
+          <option>Germany</option>
+        </select>
         <input
           type="text"
           id="large-input"
-          class="block w-full p-4 text-black border border-gray-300 rounded-lg bg-gray-100 sm:text-md focus:ring-purple-500 placeholder-black mb-4"
+          class="block w-full p-4 text-black border border-gray-300 rounded-lg bg-gray-100 sm:text-md focus:ring-purple-500 placeholder-black mb-8"
           placeholder="Email / Username"
         />
+        <select id="countries" class="block w-full mb-8 p-4 bg-gray-100 border border-gray-300 text-black text-md rounded-lg focus:ring-purple-500 focus:border-purple-500">
+          <option>United States</option>
+          <option>Canada</option>
+          <option>France</option>
+          <option>Germany</option>
+        </select>
+        <select id="countries" class="block w-full mb-8 p-4 bg-gray-100 border border-gray-300 text-black text-md rounded-lg focus:ring-purple-500 focus:border-purple-500">
+          <option>United States</option>
+          <option>Canada</option>
+          <option>France</option>
+          <option>Germany</option>
+        </select>
+        <div class="flex items-center mb-8">
+          <input checked id="checkbox-1" type="checkbox" value="" class="w-4 h-4 text-purple-600 bg-gray-100 border-gray-300 rounded focus:ring-purple-500" >
+          <label for="checkbox-1" class="ml-2 text-sm font-medium text-gray-900">I agree to the <a href="#" class="text-purple-600 hover:underline">terms and conditions</a>.</label>
+        </div>
         <button
           class="w-full rounded-lg px-4 py-2 font-black text-white ring-1 bg-primary hover:bg-white hover:text-black hover:outline-none hover:ring-2 hover:ring-primary"
         >
@@ -96,8 +118,9 @@
 <style scoped>
 #form {
   position: relative;
-  bottom: 300px;
+  bottom: 270px;
 }
+
 </style>
 <script>
 export default {

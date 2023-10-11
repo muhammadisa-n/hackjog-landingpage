@@ -35,5 +35,6 @@ export default {
 #register {
   background-image: url(../../src/assets/images/Bg_Rg.png);
   background-position: center top -30px;
+  height: 570px;
 }
 </style>
