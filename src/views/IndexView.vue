@@ -3,6 +3,7 @@
   <HomeSection />
   <AboutSection />
   <SpeakerSection />
+  <VenueSection />
   <ContactSection />
   <FooterBar />
 </template>
@@ -12,6 +13,7 @@ import HomeSection from "../layouts/Home.vue";
 import AboutSection from "../layouts/About.vue";
 import ContactSection from "../layouts/Contact.vue";
 import SpeakerSection from "../layouts/Speaker.vue";
+import VenueSection from "../layouts/Venue.vue";
 import FooterBar from "../components/Footer.vue";
 
 export default {
@@ -20,6 +22,7 @@ export default {
     HomeSection,
     AboutSection,
     SpeakerSection,
+    VenueSection,
     ContactSection,
     FooterBar,
   },
@@ -29,6 +32,7 @@ export default {
       HomeSection,
       AboutSection,
       SpeakerSection,
+      VenueSection,
       ContactSection,
       FooterBar,
     };

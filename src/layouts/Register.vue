@@ -33,7 +33,7 @@ export default {
 </script>
 <style scoped>
 #register {
-  background-image: url(../../src/assets/images/Bg_Rg.png);
+  background-image: url(../../src/assets/images/Background/Bg_Registration.png);
   background-position: center top -30px;
   height: 570px;
 }
