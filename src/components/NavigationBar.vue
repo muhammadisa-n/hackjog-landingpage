@@ -39,12 +39,12 @@
           >
             <ul class="block lg:flex">
               <li class="group">
-                <RouterLink
-                  :to="{ name: 'home' }"
+                <a
+                  href="#home"
                   class="text-base font-monserrat font-semibold text-white py-2 mx-8 flex lg:group-hover:border-b-[3px] lg:group-hover:divide-x lg:group-hover:divide-white"
                 >
                   Home
-                </RouterLink>
+                </a>
               </li>
               <li class="group">
                 <a

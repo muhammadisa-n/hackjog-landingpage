@@ -7,6 +7,7 @@
   <VenueSection />
   <ContactSection />
   <FooterBar />
+  <BackTotop link="#home" />
 </template>
 <script>
 import NavigationBar from "../components/NavigationBar.vue";
@@ -17,6 +18,7 @@ import SpeakerSection from "../layouts/Speaker.vue";
 import ScheduleSection from "../layouts/Schedule.vue";
 import VenueSection from "../layouts/Venue.vue";
 import FooterBar from "../components/Footer.vue";
+import BackTotop from "../components/BackTotop.vue";
 
 export default {
   components: {
@@ -28,6 +30,7 @@ export default {
     ContactSection,
     ScheduleSection,
     FooterBar,
+    BackTotop,
   },
   setup() {
     return {
@@ -39,6 +42,7 @@ export default {
       ContactSection,
       ScheduleSection,
       FooterBar,
+      BackTotop,
     };
   },
 };
