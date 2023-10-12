@@ -1,9 +1,9 @@
 <template>
   <section
     id="speaker"
-    class="pt-36 pb-16 lg:mt-32 -mt-20 bg-gradient-to-b from-primary to-gradasi"
+    class="pt-36 pb-16 lg:mt-32 -mt-20 bg-gradient-to-b from-primary to-gradasi bg-auto"
   >
-    <div class="container">
+    <div class="container mt-60 mb-96">
       <div class="w-full px-4">
         <div class="max-w-xl mx-auto text-center mb-16">
           <h2
@@ -106,7 +106,7 @@ export default {
 </script>
 
 <style scoped>
-/* #speaker {
+#speaker {
   background-image: url(../../src/assets/images/Background/Bg_Speaker.png);
-} */
+}
 </style>
