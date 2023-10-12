@@ -44,8 +44,8 @@
           <p
             class="font-regular font-monserrat text-base text-black px-20 max-w-xl lg:text-lg"
           >
-            “ Berfokus pada menumbuh kembangkan industri digital serta
-            transformasi masyarakat melalui Artificial Intelligence ”
+            “Berfokus pada menumbuh kembangkan industri digital serta
+            transformasi masyarakat melalui Artificial Intelligence”
           </p>
         </div>
       </div>

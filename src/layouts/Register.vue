@@ -7,7 +7,7 @@
       background-position: center top -30px;
     "
   > -->
-  <section id="register" class="pt-48 pb-32 lg:pt-48 bg-cover bg-no-repeat">
+  <section id="registration" class="pt-48 pb-32 lg:pt-48 bg-cover bg-no-repeat">
     <div class="container">
       <div class="w-full px-4">
         <div class="max-w-xl mx-auto text-center mb-16">
@@ -20,19 +20,21 @@
       </div>
     </div>
   </section>
+  <Form />
 </template>
 
 <script>
+import Form from "../layouts/Form.vue";
 export default {
   name: "Register",
-  components: {},
+  components: { Form },
   setup() {
-    return {};
+    return { Form };
   },
 };
 </script>
 <style scoped>
-#register {
+#registration {
   background-image: url(../../src/assets/images/Background/Bg_Registration.png);
   background-position: center top -30px;
   height: 570px;
