@@ -7,7 +7,10 @@
       background-position: center top -30px;
     "
   > -->
-  <section id="registration" class="pt-48 pb-32 lg:pt-48 bg-cover bg-no-repeat">
+  <section
+    id="registration"
+    class="pt-48 pb-32 lg:pt-48 lg:bg-cover lg:bg-no-repeat bg-gradient-to-b from-primary to-gradasi"
+  >
     <div class="container">
       <div class="w-full px-4">
         <div class="max-w-xl mx-auto text-center mb-16">
@@ -34,9 +37,11 @@ export default {
 };
 </script>
 <style scoped>
-#registration {
-  background-image: url(../../src/assets/images/Background/Bg_Registration.png);
-  background-position: center top -30px;
-  height: 570px;
+@media screen and (min-width: 769px) {
+  #registration {
+    background-image: url(../../src/assets/images/Background/Bg_Registration.png);
+    background-position: center top -30px;
+    height: 570px;
+  }
 }
 </style>

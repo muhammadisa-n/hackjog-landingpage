@@ -34,9 +34,11 @@
           class="w-full px-4 mb-12 lg:mb-2 text-slate-300 font-medium font-monserrat md:w-3/4"
         >
           <h2 class="font-bold text-4xl text-primary mb-5 font-pacifico">
-            <img src="../assets/images/logo.png" class="h-8" alt="" />
+            <RouterLink :to="{ name: 'home' }">
+              <img src="../assets/images/logo.png" class="h-8" alt="" />
+            </RouterLink>
           </h2>
-          <h3 class="font-normal text-base mb-2">
+          <h3 class="font-normal font-monserrat text-base mb-2">
             Hackjog sebuah ekosistem Industri digital yang berada di D.I.Y dalam
             bentuk kolaborasi hexahelix. Berfokus pada menumbuh kembangkan
             industri digital serta transformasi masyarakat melalui Artificial
@@ -108,6 +110,7 @@
 </template>
 
 <script setup>
+import { RouterLink } from "vue-router";
 const yearnow = new Date().getFullYear();
 </script>
 
