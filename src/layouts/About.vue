@@ -1,5 +1,5 @@
 <template>
-  <section id="about" class="pt-16 pb-36 lg:pt-36 max-h-screen">
+  <section id="about" class="pt-20 pb-36 lg:pt-36 max-h-screen">
     <div class="container">
       <div class="flex flex-wrap">
         <div class="w-full px-4 mb-10 lg:w-1/2">
@@ -17,8 +17,10 @@
             </div>
           </div>
         </div>
-        <div class="w-full px-4 lg:w-1/2 mb-12">
-          <h4 class="font-semibold font-monserrat text-primary text-lg mb-3">
+        <div class="w-full px-4 lg:w-1/2 mb-12 items-center lg:ml-0 ml-5">
+          <h4
+            class="font-semibold font-monserrat text-primary text-lg lg:text-xl mb-3"
+          >
             What is a HackJog event?
           </h4>
           <p
@@ -65,11 +67,101 @@
 </template>
 
 <script>
+import { Swiper, SwiperSlide } from "swiper/vue";
+import { Autoplay, Pagination } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/pagination";
+import { ref } from "vue";
 export default {
-  name: "AboutSection",
-  components: {},
+  components: { Swiper, SwiperSlide },
   setup() {
-    return {};
+    const dataImage = ref([
+      {
+        nama: "Image 1",
+        img: new URL(
+          "@/assets/images/Ecosystem Partner/logo_asiaQuest.png",
+          import.meta.url
+        ).href,
+      },
+      {
+        nama: "Image 2",
+        img: new URL(
+          "@/assets/images/Ecosystem Partner/logo_Bt.png",
+          import.meta.url
+        ).href,
+      },
+      {
+        nama: "Image 3",
+        img: new URL(
+          "@/assets/images/Ecosystem Partner/logo_Bt.png",
+          import.meta.url
+        ).href,
+      },
+      {
+        nama: "Image 4",
+        img: new URL(
+          "@/assets/images/Ecosystem Partner/logo_Ds.png",
+          import.meta.url
+        ).href,
+      },
+      {
+        nama: "Image 5",
+        img: new URL(
+          "@/assets/images/Ecosystem Partner/logo_Hb.png",
+          import.meta.url
+        ).href,
+      },
+      {
+        nama: "Image 6",
+        img: new URL(
+          "@/assets/images/Ecosystem Partner/logo_Jala.png",
+          import.meta.url
+        ).href,
+      },
+      {
+        nama: "Image 7",
+        img: new URL(
+          "@/assets/images/Ecosystem Partner/logo_Kedata.png",
+          import.meta.url
+        ).href,
+      },
+      {
+        nama: "Image 8",
+        img: new URL(
+          "@/assets/images/Ecosystem Partner/logo_ksj",
+          import.meta.url
+        ).href,
+      },
+      {
+        nama: "Image 9",
+        img: new URL(
+          "@/assets/images/Ecosystem Partner/logo_morbis",
+          import.meta.url
+        ).href,
+      },
+      {
+        nama: "Image 10",
+        img: new URL(
+          "@/assets/images/Ecosystem Partner/logo_Pj.png",
+          import.meta.url
+        ).href,
+      },
+      {
+        nama: "Image 11",
+        img: new URL(
+          "@/assets/images/Ecosystem Partner/logo_symbolic.png",
+          import.meta.url
+        ).href,
+      },
+      {
+        nama: "Image 12",
+        img: new URL(
+          "@/assets/images/Ecosystem Partner/logo_harjo.png",
+          import.meta.url
+        ).href,
+      },
+    ]);
+    return { modules: [Pagination, Autoplay], dataImage };
   },
 };
 </script>

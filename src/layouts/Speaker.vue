@@ -1,7 +1,7 @@
 <template>
   <section
     id="speaker"
-    class="pt-36 pb-16 mt-32 bg-gradient-to-b from-primary to-gradasi"
+    class="pt-36 pb-16 lg:mt-32 -mt-20 bg-gradient-to-b from-primary to-gradasi"
   >
     <div class="container">
       <div class="w-full px-4">
@@ -37,12 +37,12 @@
           >
             <img :src="data.img" alt="Speaker" class="w-full h-full" />
             <h3
-              class="font-semibold font-monserrat text-xl lg:text-2xl text-black mt-5 mb-3 text-center"
+              class="font-semibold font-monserrat text-xs lg:text-2xl text-black lg:mt-5 lg:mb-3 text-center block"
             >
               {{ data.nama }}
             </h3>
             <p
-              class="font-semibold font-monserrat text-xl text-white text-center"
+              class="font-semibold font-monserrat text-xs lg:text-xl text-white text-center"
             >
               {{ data.nama_perusahaan }}
             </p>

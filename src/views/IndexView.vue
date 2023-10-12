@@ -3,6 +3,7 @@
   <HomeSection />
   <AboutSection />
   <SpeakerSection />
+  <ScheduleSection />
   <VenueSection />
   <ContactSection />
   <FooterBar />
@@ -13,6 +14,7 @@ import HomeSection from "../layouts/Home.vue";
 import AboutSection from "../layouts/About.vue";
 import ContactSection from "../layouts/Contact.vue";
 import SpeakerSection from "../layouts/Speaker.vue";
+import ScheduleSection from "../layouts/Schedule.vue";
 import VenueSection from "../layouts/Venue.vue";
 import FooterBar from "../components/Footer.vue";
 
@@ -24,6 +26,7 @@ export default {
     SpeakerSection,
     VenueSection,
     ContactSection,
+    ScheduleSection,
     FooterBar,
   },
   setup() {
@@ -34,6 +37,7 @@ export default {
       SpeakerSection,
       VenueSection,
       ContactSection,
+      ScheduleSection,
       FooterBar,
     };
   },

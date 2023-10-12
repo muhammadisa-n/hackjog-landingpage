@@ -56,14 +56,6 @@
               </li>
               <li class="group">
                 <a
-                  href="#event"
-                  class="lg:hidden text-base font-monserrat font-semibold text-white py-2 mx-8 flex lg:group-hover:border-b-[3px] lg:group-hover:divide-x-[3px] lg:group-hover:divide-white"
-                >
-                  Event
-                </a>
-              </li>
-              <li class="group">
-                <a
                   href="#speaker"
                   class="lg:hidden text-base font-monserrat font-semibold text-white py-2 mx-8 flex lg:group-hover:border-b-[3px] lg:group-hover:divide-x-[3px] lg:group-hover:divide-white"
                 >
