@@ -1,5 +1,5 @@
 <template>
-  <section id="about" class="pt-20 pb-36 lg:pt-36 max-h-screen">
+  <section id="about" class="pt-20 pb-16 lg:pt-36 max-h-screen">
     <div class="container">
       <div class="flex flex-wrap">
         <div class="w-full px-4 mb-10 lg:w-1/2">
