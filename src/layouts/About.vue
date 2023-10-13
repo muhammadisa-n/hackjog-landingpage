@@ -1,12 +1,12 @@
 <template>
-  <section id="about" class="pt-20 pb-16 lg:pt-36 max-h-screen">
+  <section id="about" class="pt-16 pb-16 lg:pt-48">
     <div class="container">
       <div class="flex flex-wrap">
-        <div class="w-full px-4 mb-10 lg:w-1/2">
+        <div class="w-full px-4 mb-4 sm:mb-4 lg:mb-0 lg:h-0 lg:w-1/2">
           <div class="container">
             <div class="flex">
               <iframe
-                width="500"
+                width="100%"
                 height="300"
                 src="https://www.youtube.com/embed/ZrGNzazBb20?si=2TzRmdkdfIG9MjZe"
                 title="YouTube video player"
@@ -31,11 +31,11 @@
             industri digital serta transformasi masyarakat melalui Artificial
             Intelligence.
           </p>
-          <div class="flex items-center dark:text-white mt-3 mb-12">
+          <div class="flex items-center dark:text-white mt-3 mb-5 lg:mb-10">
             <h4 class="font-semibold font-monserrat text-primary text-lg mr-5">
               Follow
             </h4>
-            <!-- {{-- X Twitter logo --}} -->
+            <!-- Twitter logo -->
             <a
               href="https://twitter.com/"
               target="_blank"
@@ -43,7 +43,7 @@
             >
               <img src="../assets/images/x.png" width="20" alt="" />
             </a>
-            <!-- {{-- Instagram logo --}} -->
+            <!-- Instagram logo -->
             <a
               href="https://instagram.com/"
               target="_blank"
@@ -51,7 +51,7 @@
             >
               <img src="../assets/images/instagram.png" width="20" alt="" />
             </a>
-            <!-- {{-- Youtube logo --}} -->
+            <!-- Youtube logo -->
             <a
               href="https://youtube.com/"
               target="_blank"
@@ -65,6 +65,7 @@
     </div>
   </section>
 </template>
+
 
 <script>
 import { Swiper, SwiperSlide } from "swiper/vue";
