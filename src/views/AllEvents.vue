@@ -1,22 +1,15 @@
 <template>
-  <section id="schedule" class="pt-12 pb-16 mt-32">
+  <NavigationBar />
+  <section id="allevents" class="pb-16 mt-32">
     <div class="container">
       <div class="w-full px-4">
         <div class="max-w-xl mx-auto text-center mb-16">
           <h2
             class="font-bold font-monserrat text-black text-3xl mb-4 sm:text-4xl lg:text-5xl uppercase"
           >
-            Event
+            All Events
           </h2>
         </div>
-      </div>
-      <div class="w-11/12 flex">
-        <RouterLink
-          :to="{ name: 'allevents' }"
-          class="bg-primary rounded-md text-white ring-1 font-semibold px-1 py-1 hover:bg-gradasi hover:text-white hover:outline-none hover:ring-2 hover:ring-primary"
-        >
-          Lihat Semua
-        </RouterLink>
       </div>
       <div
         class="container w-full flex flex-wrap justify-between items-center xl:w-10/12 mx-auto gap-x-10"
@@ -52,12 +45,17 @@
       </div>
     </div>
   </section>
+  <FooterBar />
+  <BackTotop link="#allevents" />
 </template>
 
 <script>
-import { RouterLink } from "vue-router";
 import { ref } from "vue";
+import NavigationBar from "../components/NavigationBar.vue";
+import FooterBar from "../components/Footer.vue";
+import BackTotop from "../components/BackTotop.vue";
 export default {
+  components: { NavigationBar, FooterBar, BackTotop },
   setup() {
     const datas = ref([
       {
@@ -84,8 +82,32 @@ export default {
         bulan: "October",
         lokasi: "Cinema Universitas AMIKOM",
       },
+      {
+        nama: "Hackjog",
+        tanggal: "15",
+        bulan: "October",
+        lokasi: "Cinema Universitas AMIKOM",
+      },
+      {
+        nama: "Hackjog",
+        tanggal: "16",
+        bulan: "October",
+        lokasi: "Cinema Universitas AMIKOM",
+      },
+      {
+        nama: "Hackjog",
+        tanggal: "17",
+        bulan: "October",
+        lokasi: "Cinema Universitas AMIKOM",
+      },
+      {
+        nama: "Hackjog",
+        tanggal: "18",
+        bulan: "October",
+        lokasi: "Cinema Universitas AMIKOM",
+      },
     ]);
-    return { datas };
+    return { datas, NavigationBar, FooterBar, BackTotop };
   },
 };
 </script>

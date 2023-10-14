@@ -1,6 +1,7 @@
 import { createRouter, createWebHistory } from "vue-router";
 import IndexView from "../views/IndexView.vue";
 import Registration from "../views/Registration.vue";
+import AllEvents from "../views/AllEvents.vue";
 import PageNotFound from "../views/NotFound.vue";
 import AdminPage from "../views/admin/AdminDashboard.vue";
 import AdminBanner from "../views/admin/AdminBanner.vue";
@@ -20,6 +21,11 @@ const router = createRouter({
       path: "/registration",
       name: "registration",
       component: Registration,
+    },
+    {
+      path: "/allevents",
+      name: "allevents",
+      component: AllEvents,
     },
     {
       path: "/admin",
