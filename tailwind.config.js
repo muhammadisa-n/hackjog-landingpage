@@ -18,6 +18,8 @@ module.exports = {
         secondary: "#64748b",
         dark: "#030712",
         gradasi: "#853FF7",
+        birutua: "#002D71",
+        birumuda: "#BED8FF"
       },
       screens: {
         "2xl": "1320px",
