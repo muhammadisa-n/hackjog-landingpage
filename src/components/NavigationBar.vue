@@ -144,7 +144,7 @@ export default {
       document.querySelector("#nav-menu").classList.toggle("hidden");
     };
 
-    return { openmenu };
+    return { openmenu, RouterLink };
   },
 };
 </script>

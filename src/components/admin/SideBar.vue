@@ -78,6 +78,14 @@
           </li>
           <li>
             <RouterLink
+              :to="{ name: 'adminSchedule' }"
+              class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
+            >
+              <span class="flex-1 ml-3 whitespace-nowrap">Schedule</span>
+            </RouterLink>
+          </li>
+          <li>
+            <RouterLink
               :to="{ name: 'adminPartner' }"
               class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
             >
@@ -85,6 +93,14 @@
                 >Ecosystem Partner</span
               >
             </RouterLink>
+          </li>
+          <li>
+            <button
+              @click="logout()"
+              class="flex rounded-full items-center px-2 py-2 text-white bg-primary ml-3"
+            >
+              <span class="flex-1">Logout</span>
+            </button>
           </li>
         </ul>
       </div>
@@ -94,9 +110,18 @@
 
 <script>
 import { RouterLink } from "vue-router";
+import { useRouter } from "vue-router";
 export default {
   setup() {
-    return {};
+    const router = useRouter();
+    return { router, RouterLink };
+  },
+  methods: {
+    logout() {
+      localStorage.setItem("authenticated", false);
+      localStorage.removeItem("authenticated");
+      this.router.push({ name: "home" });
+    },
   },
 };
 </script>
