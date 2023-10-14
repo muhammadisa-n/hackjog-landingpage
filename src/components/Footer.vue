@@ -23,7 +23,7 @@
               <a
                 href="https://www.instagram.com/"
                 target="_blank"
-                class="inline-block text-base hover:text-primary mb-3 mr-2"
+                class="inline-block text-base hover:text-primary mb-3 mr-2 image-hover"
               >
                 <img
                   src="../assets/images/instagram-white.png"
@@ -35,7 +35,7 @@
               <a
                 href="https://twitter.com/home?lang=id"
                 target="_blank"
-                class="inline-block text-base hover:text-primary mb-3 mr-2"
+                class="inline-block text-base hover:text-primary mb-3 mr-2 image-hover"
               >
                 <img
                   src="../assets/images/twitter-white.png"
@@ -47,7 +47,7 @@
               <a
                 href="https://www.youtube.com/"
                 target="_blank"
-                class="inline-block text-base hover:text-primary mr-2"
+                class="inline-block text-base hover:text-primary mr-2 image-hover"
               >
                 <img
                   src="../assets/images/youtube-putih.png"
@@ -59,7 +59,7 @@
               <a
                 href="https://www.youtube.com/"
                 target="_blank"
-                class="inline-block text-base hover:text-primary mb-3 mr-2"
+                class="inline-block text-base hover:text-primary mb-3 mr-2 image-hover"
               >
                 <img
                   src="../assets/images/ion_logo-whatsapp.png"
@@ -86,4 +86,10 @@ import { RouterLink } from "vue-router";
 const yearnow = new Date().getFullYear();
 </script>
 
-<style lang="scss" scoped></style>
+<style scoped>
+  .image-hover:hover img {
+    filter: brightness(0) grayscale(100%);
+  }
+
+</style>
+

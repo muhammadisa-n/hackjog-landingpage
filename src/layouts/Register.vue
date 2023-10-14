@@ -15,7 +15,7 @@
       <div class="w-full px-4">
         <div class="max-w-xl mx-auto text-center mb-16">
           <h2
-            class="font-bold text-white text-3xl mb-4 sm:text-4xl lg:text-5xl dark:text-white"
+            class="font-bold text-white text-3xl mb-4 sm:text-4xl lg:text-5xl"
           >
             REGISTRATION
           </h2>

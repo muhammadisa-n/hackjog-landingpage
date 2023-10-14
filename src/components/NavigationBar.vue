@@ -1,162 +1,137 @@
 <template>
-  <header
-    class="bg-primary absolute top-0 left-0 w-full flex items-center z-10"
-  >
-    <div class="container">
-      <div class="flex items-center justify-between relative">
-        <div class="px-4">
-          <RouterLink
-            :to="{ name: 'home' }"
-            class="font- font-monserrat text-lg text-white block py-6"
-            ><img
-              src="../assets/images/logo.png"
-              class="h-8 mr-3"
-              alt="Hackgov Logo"
+  <header>
+    <nav class="bg-primary fixed top-0 left-0 w-full z-10">
+      <div
+        class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4 h-20"
+      >
+        <RouterLink
+          :to="{ name: 'home' }"
+          class="font- font-monserrat text-lg text-white block"
+        >
+          <img
+            src="../assets/images/logo.png"
+            class="h-8 mr-3"
+            alt="Hackgov Logo"
+          />
+        </RouterLink>
+        <button
+          data-collapse-toggle="navbar-dropdown"
+          type="button"
+          class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-white rounded-lg lg:hidden hover:bg-dark focus:outline-none focus:ring-2 focus:ring-white"
+          aria-controls="navbar-dropdown"
+          aria-expanded="false"
+        >
+          <span class="sr-only">Open main menu</span>
+          <svg
+            class="w-5 h-5"
+            aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 17 14"
+          >
+            <path
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M1 1h15M1 7h15M1 13h15"
             />
-          </RouterLink>
-        </div>
-        <div class="flex items-center px-4">
-          <button
-            @click="openmenu"
-            id="hamburger"
-            name="hamburger"
-            type="button"
-            class="block absolute right-4 lg:hidden"
+          </svg>
+        </button>
+        <div class="hidden w-full lg:block lg:w-auto" id="navbar-dropdown">
+          <ul
+            class="flex flex-col font-medium lg:p-0 mt-4 border border-white rounded-lg bg-primary lg:flex-row lg:space-x-8 lg:mt-0 lg:border-0"
           >
-            <span
-              class="hamburger-line transition duration-300 ease-in-out origin-top-left"
-            ></span>
-            <span
-              class="hamburger-line transition duration-300 ease-in-out"
-            ></span>
-            <span
-              class="hamburger-line transition duration-300 ease-in-out origin-bottom-left"
-            ></span>
-          </button>
-          <nav
-            id="nav-menu"
-            class="hidden absolute py-5 bg-primary shadow-lg border-2 max-w-[250px] w-full right-4 top-full lg:block lg:static lg:bg-transparent lg:max-w-full lg:border-none lg:shadow-none lg:rounded-none"
-          >
-            <ul class="block lg:flex">
-              <li class="group">
-                <a
-                  href="#home"
-                  class="text-base font-monserrat font-semibold text-white py-2 mx-8 flex lg:group-hover:border-b-[3px] lg:group-hover:divide-x lg:group-hover:divide-white"
+            <li>
+              <a
+                href="#home"
+                class="block py-2 pl-3 pr-4 text-white bg-gradasi rounded lg:bg-transparent lg:text-white lg:hover:text-dark lg:p-0 lg:mt-2 lg:mx-4"
+                aria-current="page"
+                >Home</a
+              >
+            </li>
+            <li>
+              <a
+                href="#about"
+                class="block py-2 pl-3 pr-4 text-white rounded hover:bg-gradasi lg:hover:bg-transparent lg:border-0 lg:hover:text-dark lg:p-0 lg:mt-2 lg:mx-4"
+                >About</a
+              >
+            </li>
+            <li>
+              <button
+                id="dropdownNavbarLink"
+                data-dropdown-toggle="dropdownNavbar"
+                class="flex items-center justify-between w-full py-2 pl-3 pr-4 text-white rounded hover:bg-gradasi lg:hover:bg-transparent lg:border-0 lg:hover:text-dark lg:p-0 lg:w-auto lg:mt-2 lg:mx-4"
+              >
+                Event
+                <svg
+                  class="w-2.5 h-2.5 ml-2.5"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 10 6"
                 >
-                  Home
-                </a>
-              </li>
-              <li class="group">
-                <a
-                  href="#about"
-                  class="text-base font-monserrat font-semibold text-white py-2 mx-8 flex lg:group-hover:border-b-[3px] lg:group-hover:divide-x-[3px] lg:group-hover:divide-white"
+                  <path
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="m1 1 4 4 4-4"
+                  />
+                </svg>
+              </button>
+              <!-- Dropdown menu -->
+              <div
+                id="dropdownNavbar"
+                class="z-10 hidden font-normal bg-primary border border-white divide-y divide-gray-100 rounded-lg shadow w-44"
+              >
+                <ul
+                  class="py-2 text-sm text-gray-700 dark:text-gray-400"
+                  aria-labelledby="dropdownLargeButton"
                 >
-                  About
-                </a>
-              </li>
-              <li class="group">
-                <a
-                  href="#speaker"
-                  class="lg:hidden text-base font-monserrat font-semibold text-white py-2 mx-8 flex lg:group-hover:border-b-[3px] lg:group-hover:divide-x-[3px] lg:group-hover:divide-white"
-                >
-                  Speaker
-                </a>
-              </li>
-              <li class="group">
-                <a
-                  href="#schedule"
-                  class="lg:hidden text-base font-monserrat font-semibold text-white py-2 mx-8 flex lg:group-hover:border-b-[3px] lg:group-hover:divide-x-[3px] lg:group-hover:divide-white"
-                >
-                  Schedule
-                </a>
-              </li>
-              <li class="group">
-                <a
-                  href="#venue"
-                  class="lg:hidden text-base font-monserrat font-semibold text-white py-2 mx-8 flex lg:group-hover:border-b-[3px] lg:group-hover:divide-x-[3px] lg:group-hover:divide-white"
-                >
-                  Venue
-                </a>
-              </li>
-              <!-- navbar not mobile  -->
-              <li class="group">
-                <button
-                  id="dropdownDefaultButton"
-                  data-dropdown-toggle="dropdown"
-                  class="hidden text-white font-semibold rounded-lg text-base mx-8 py-2 text-center lg:inline-flex items-center"
-                  type="button"
-                >
-                  Event
-                  <svg
-                    class="w-2.5 h-2.5 ml-2.5 hidden lg:block"
-                    aria-hidden="true"
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 10 6"
-                  >
-                    <path
-                      stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                      d="m1 1 4 4 4-4"
-                    />
-                  </svg>
-                </button>
-                <!-- Dropdown menu -->
-                <div
-                  id="dropdown"
-                  class="z-10 hidden bg-primary w w-44 border border-black"
-                >
-                  <ul
-                    class="py-2 text-sm text-gray-700 dark:text-gray-200"
-                    aria-labelledby="dropdownDefaultButton"
-                  >
-                    <li>
-                      <a
-                        href="#speaker"
-                        class="block text-white font-semibold px-4 py-2"
-                        >Speaker</a
-                      >
-                    </li>
-                    <li>
-                      <a
-                        href="#schedule"
-                        class="block text-white font-semibold px-4 py-2"
-                        >Schedule</a
-                      >
-                    </li>
-                    <li>
-                      <a
-                        href="#venue"
-                        class="block text-white font-semibold px-4 py-2"
-                        >Venue</a
-                      >
-                    </li>
-                  </ul>
-                </div>
-              </li>
-              <li class="group">
-                <a
-                  href="#contact"
-                  class="text-base font-monserrat font-semibold text-white py-2 mx-8 flex lg:group-hover:border-b-[3px] lg:group-hover:divide-x-[3px] lg:group-hover:divide-white"
-                >
-                  Contact
-                </a>
-              </li>
-              <li class="mt-3 lg:mt-0 flex items-center pl-8">
-                <button
-                  @click="$router.push('registration')"
-                  class="bg-white rounded-full text-primary font-semibold px-2 py-2"
-                >
-                  Registration
-                </button>
-              </li>
-            </ul>
-          </nav>
+                  <li>
+                    <a
+                      href="#speaker"
+                      class="block px-4 py-2 hover:bg-gradasi text-white lg:hover:text-dark"
+                      >Speaker</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="#schedule"
+                      class="block px-4 py-2 hover:bg-gradasi text-white lg:hover:text-dark"
+                      >Schedule</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="#venue"
+                      class="block px-4 py-2 hover:bg-gradasi text-white lg:hover:text-dark"
+                      >Venue</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li>
+              <a
+                href="#contact"
+                class="block py-2 pl-3 pr-4 text-white rounded hover:bg-gradasi lg:hover:bg-transparent lg:border-0 lg:hover:text-dark lg:p-0 lg:mt-2 lg:mx-4"
+                >Contact</a
+              >
+            </li>
+            <li class="my-4 mx-4 lg:my-0 lg:mx-0">
+              <button
+                @click="$router.push('registration')"
+                class="bg-white rounded-full text-primary ring-1 font-semibold px-2 py-2 w-full lg:w-30 hover:bg-gradasi hover:text-white hover:outline-none hover:ring-2 hover:ring-primary"
+              >
+                Registration
+              </button>
+            </li>
+          </ul>
         </div>
       </div>
-    </div>
+    </nav>
   </header>
 </template>
 
