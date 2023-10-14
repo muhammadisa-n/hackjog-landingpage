@@ -58,6 +58,9 @@ const router = createRouter({
       component: PageNotFound,
     },
   ],
+  scrollBehavior(to, from, savedPosition) {
+    return { left: 0, top: 0, behavior: "smooth" };
+  },
 });
 const isAuthenticated = true;
 router.beforeEach((to, from, next) => {
