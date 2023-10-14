@@ -1,7 +1,7 @@
 <template>
   <section
     id="speaker"
-    class="pt-10 pb-12 sm:pt-12 sm:pb-12 lg:pt-36 lg:pb-16 lg:mt-0 -mt-20 bg-gradient-to-b from-primary to-gradasi lg:bg-auto"
+    class="pt-10 pb-8 sm:pt-12 sm:pb-12 lg:pt-36 lg:pb-16 lg:mt-0 -mt-20 bg-gradient-to-b from-primary to-gradasi lg:bg-auto"
   >
     <div class="container lg:mt-60 lg:mb-96">
       <div class="w-full px-4">
@@ -113,5 +113,4 @@ export default {
     background-repeat: no-repeat;
   }
 }
-
 </style>

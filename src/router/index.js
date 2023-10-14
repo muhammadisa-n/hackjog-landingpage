@@ -25,9 +25,12 @@ const router = createRouter({
       path: "/admin",
       name: "adminIndex",
       component: AdminPage,
-      children: [],
     },
-    { path: "/admin/banner", name: "adminBanner", component: AdminBanner },
+    {
+      path: "/admin/banner",
+      name: "adminBanner",
+      component: AdminBanner,
+    },
     {
       path: "/admin/speakers",
       name: "adminSpeakers",
@@ -50,5 +53,23 @@ const router = createRouter({
     },
   ],
 });
-
+const isAuthenticated = true;
+router.beforeEach((to, from, next) => {
+  if (to.name === "adminIndex" && !isAuthenticated) {
+    next({ name: "home" });
+  }
+  if (to.name === "adminBanner" && !isAuthenticated) {
+    next({ name: "home" });
+  }
+  if (to.name === "adminSpeakers" && !isAuthenticated) {
+    next({ name: "home" });
+  }
+  if (to.name === "adminVenues" && !isAuthenticated) {
+    next({ name: "home" });
+  }
+  if (to.name === "adminPartner" && !isAuthenticated) {
+    next({ name: "home" });
+  }
+  next();
+});
 export default router;
