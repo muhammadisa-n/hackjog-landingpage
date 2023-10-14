@@ -3,12 +3,12 @@
   <div class="p-4 sm:ml-64">
     <div class="flex h-screen rounded bg-gray-50 dark:bg-gray-800">
       <div class="w-full mt-3">
-        <h1 class="text-3xl mt-5">Schedule Page</h1>
+        <h1 class="text-3xl mt-5">Speakers Page</h1>
         <button
           type="button"
           class="mt-10 focus:outline-none text-white bg-primary hover:bg-purple-800 focus:ring-4 focus:ring-purple-300 font-medium rounded-lg text-sm px-5 py-2.5 mb-2"
         >
-          + Add Schedule
+          + Add Speakers
         </button>
 
         <h2 class="text-3xl font-semibold font-monserrat mx-auto">
@@ -21,10 +21,9 @@
               >
                 <tr>
                   <th scope="col" class="px-6 py-3">Name</th>
-                  <th scope="col" class="px-6 py-3">lokasi</th>
-                  <th scope="col" class="px-6 py-3">Tanggal</th>
-                  <th scope="col" class="px-6 py-3">Bulan</th>
-                  <th scope="col" class="px-6 py-3">Tahun</th>
+                  <th scope="col" class="px-6 py-3">Nama Perusahaan</th>
+                  <th scope="col" class="px-6 py-3">Image</th>
+                  <th scope="col" class="px-6 py-3">Image url</th>
                   <th scope="col" class="px-6 py-3">Action</th>
                   <th scope="col" class="px-6 py-3"></th>
                 </tr>
@@ -40,7 +39,6 @@
                     Apple MacBook Pro 17"
                   </th>
                   <td class="px-6 py-4">Silver</td>
-                  <td class="px-6 py-4">Laptop</td>
                   <td class="px-6 py-4">Laptop</td>
                   <td class="px-6 py-4">Laptop</td>
                   <td class="px-6 py-4">
@@ -61,7 +59,7 @@
 </template>
 
 <script>
-import SideBar from "../../components/admin/SideBar.vue";
+import SideBar from "../../../components/admin/SideBar.vue";
 export default {
   components: { SideBar },
   setup() {

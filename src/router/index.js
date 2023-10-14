@@ -4,12 +4,12 @@ import Registration from "../views/Registration.vue";
 import AllEvents from "../views/AllEvents.vue";
 import LoginView from "../views/Login.vue";
 import PageNotFound from "../views/NotFound.vue";
-import AdminPage from "../views/admin/AdminDashboard.vue";
-import AdminBanner from "../views/admin/AdminBanner.vue";
-import AdminSpeaker from "../views/admin/AdminSpeaker.vue";
-import AdminVenue from "../views/admin/AdminVenue.vue";
-import adminSchedule from "../views/admin/adminSchedule.vue";
-import AdminPartner from "../views/admin/AdminPartner.vue";
+import AdminPage from "../views/admin/Dashboard/index.vue";
+import AdminBanner from "../views/admin/Banner/index.vue";
+import AdminSpeaker from "../views/admin/Speaker/index.vue";
+import AdminVenue from "../views/admin/Venue/index.vue";
+import adminSchedule from "../views/admin/Schedule/index.vue";
+import AdminPartner from "../views/admin/Partner/index.vue";
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),

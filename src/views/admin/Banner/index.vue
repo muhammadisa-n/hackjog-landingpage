@@ -3,12 +3,12 @@
   <div class="p-4 sm:ml-64">
     <div class="flex h-screen rounded bg-gray-50 dark:bg-gray-800">
       <div class="w-full mt-3">
-        <h1 class="text-3xl mt-5">Venue Page</h1>
+        <h1 class="text-3xl mt-5">Banner Page</h1>
         <button
           type="button"
           class="mt-10 focus:outline-none text-white bg-primary hover:bg-purple-800 focus:ring-4 focus:ring-purple-300 font-medium rounded-lg text-sm px-5 py-2.5 mb-2"
         >
-          + Add Venue
+          + Add Banner
         </button>
 
         <h2 class="text-3xl font-semibold font-monserrat mx-auto">
@@ -22,23 +22,25 @@
                 <tr>
                   <th scope="col" class="px-6 py-3">Name</th>
                   <th scope="col" class="px-6 py-3">Image</th>
-                  <th scope="col" class="px-6 py-3">Image url</th>
                   <th scope="col" class="px-6 py-3">Action</th>
                   <th scope="col" class="px-6 py-3"></th>
                 </tr>
               </thead>
               <tbody>
                 <tr
+                  v-for="item in dataBanner"
+                  :key="item.id"
                   class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600"
                 >
                   <th
                     scope="row"
                     class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
                   >
-                    Apple MacBook Pro 17"
+                    {{ item.nama }}
                   </th>
-                  <td class="px-6 py-4">Silver</td>
-                  <td class="px-6 py-4">Laptop</td>
+                  <td class="px-6 py-4">
+                    <img :src="item.url" alt="" class="w-20 h-10" />
+                  </td>
                   <td class="px-6 py-4">
                     <a
                       href="#"
@@ -57,11 +59,24 @@
 </template>
 
 <script>
-import SideBar from "../../components/admin/SideBar.vue";
+import axios from "axios";
+import { ref, onMounted } from "vue";
+import SideBar from "../../../components/admin/SideBar.vue";
 export default {
   components: { SideBar },
   setup() {
-    return { SideBar };
+    const dataBanner = ref([]);
+    onMounted(async () => {
+      try {
+        const response = await axios.get(
+          import.meta.env.VITE_BASE_URL_API + `banners`
+        ); // Ganti URL sesuai dengan API yang ingin Anda akses
+        dataBanner.value = response.data.data;
+      } catch (error) {
+        console.error("Gagal mengambil data dari API:", error);
+      }
+    });
+    return { SideBar, dataBanner };
   },
 };
 </script>
