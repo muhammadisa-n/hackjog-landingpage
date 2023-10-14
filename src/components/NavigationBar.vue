@@ -43,18 +43,18 @@
             class="flex flex-col font-medium lg:p-0 mt-4 border border-white rounded-lg bg-primary lg:flex-row lg:space-x-8 lg:mt-0 lg:border-0"
           >
             <li>
-              <a
-                href="#home"
+              <RouterLink
+                :to="{ name: 'home', hash: '#home' }"
                 class="block py-2 pl-3 pr-4 text-white bg-gradasi rounded lg:bg-transparent lg:text-white lg:hover:text-dark lg:p-0 lg:mt-2 lg:mx-4"
                 aria-current="page"
-                >Home</a
+                >Home</RouterLink
               >
             </li>
             <li>
-              <a
-                href="#about"
+              <RouterLink
+                :to="{ name: 'home', hash: '#about' }"
                 class="block py-2 pl-3 pr-4 text-white rounded hover:bg-gradasi lg:hover:bg-transparent lg:border-0 lg:hover:text-dark lg:p-0 lg:mt-2 lg:mx-4"
-                >About</a
+                >About</RouterLink
               >
             </li>
             <li>
@@ -90,34 +90,34 @@
                   aria-labelledby="dropdownLargeButton"
                 >
                   <li>
-                    <a
-                      href="#speaker"
+                    <RouterLink
+                      :to="{ name: 'home', hash: '#speaker' }"
                       class="block px-4 py-2 hover:bg-gradasi text-white lg:hover:text-dark"
-                      >Speaker</a
+                      >Speaker</RouterLink
                     >
                   </li>
                   <li>
-                    <a
-                      href="#schedule"
+                    <RouterLink
+                      :to="{ name: 'home', hash: '#schedule' }"
                       class="block px-4 py-2 hover:bg-gradasi text-white lg:hover:text-dark"
-                      >Schedule</a
+                      >Schedule</RouterLink
                     >
                   </li>
                   <li>
-                    <a
-                      href="#venue"
+                    <RouterLink
+                      :to="{ name: 'home', hash: '#venue' }"
                       class="block px-4 py-2 hover:bg-gradasi text-white lg:hover:text-dark"
-                      >Venue</a
+                      >Venue</RouterLink
                     >
                   </li>
                 </ul>
               </div>
             </li>
             <li>
-              <a
-                href="#contact"
+              <RouterLink
+                :to="{ name: 'home', hash: '#contact' }"
                 class="block py-2 pl-3 pr-4 text-white rounded hover:bg-gradasi lg:hover:bg-transparent lg:border-0 lg:hover:text-dark lg:p-0 lg:mt-2 lg:mx-4"
-                >Contact</a
+                >Contact</RouterLink
               >
             </li>
             <li class="my-4 mx-4 lg:my-0 lg:mx-0">

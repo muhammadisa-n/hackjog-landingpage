@@ -71,6 +71,14 @@ const router = createRouter({
     },
   ],
   scrollBehavior(to, from, savedPosition) {
+    if (to.hash) {
+      // This ensures that if hash is provided to router.push it works as expected.
+      //  & since we have used "behavior: 'smooth'" the browser will slowly come to this hash position.
+      return {
+        el: to.hash,
+        behavior: "smooth",
+      };
+    }
     return { left: 0, top: 0, behavior: "smooth" };
   },
 });
