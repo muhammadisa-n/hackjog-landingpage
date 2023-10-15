@@ -1,5 +1,5 @@
 <template>
-  <section id="about" class="pt-16 pb-16 lg:pt-48">
+  <section id="about" class="pt-16 lg:pb-16 lg:pt-48">
     <div class="container">
       <div class="flex flex-wrap">
         <div class="w-full px-4 mb-4 sm:mb-4 lg:mb-0 lg:h-0 lg:w-1/2">
@@ -17,7 +17,7 @@
             </div>
           </div>
         </div>
-        <div class="w-full px-4 lg:w-1/2 mb-12 items-center lg:ml-0 ml-5">
+        <div class="w-full px-4 lg:w-1/2 lg:mb-12 items-center lg:ml-0 ml-5">
           <h4
             class="font-semibold font-monserrat text-primary text-lg lg:text-xl mb-3"
           >
@@ -31,7 +31,7 @@
             industri digital serta transformasi masyarakat melalui Artificial
             Intelligence.
           </p>
-          <div class="flex items-center dark:text-white mt-3 mb-5 lg:mb-10">
+          <div class="flex items-center dark:text-white mt-3 lg:mb-10">
             <h4 class="font-semibold font-monserrat text-primary text-lg mr-5">
               Follow
             </h4>

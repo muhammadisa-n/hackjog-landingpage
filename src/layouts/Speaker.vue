@@ -1,9 +1,12 @@
 <template>
   <section
     id="speaker"
-    class="pt-10 pb-8 sm:pt-12 sm:pb-12 lg:pt-36 lg:pb-16 lg:mt-0 -mt-20 bg-gradient-to-b from-primary to-gradasi lg:bg-auto"
+    class="pt-12 pb-12 lg:pt-36 sm:pb-16 lg:pt-36 lg:pb-16 mt-32 bg-gradient-to-b from-primary to-gradasi"
   >
-    <div class="container lg:mt-60 lg:mb-96">
+  <div>
+      <img src="../assets/images/Background/Bgonlyup.png" alt="layerbg" class="w-full  mt-[-25%] hiddenbg">
+  </div>
+    <div class="container lg:mb-44">
       <div class="w-full px-4">
         <div class="max-w-xl mx-auto text-center mb-16">
           <h2
@@ -51,6 +54,9 @@
       </div>
     </div>
   </section>
+  <div>
+      <img src="../assets/images/Background/Bgonlydw.png" alt="layerbg" class="w-full  mt-[-25%] hiddenbg">
+  </div>
 </template>
 
 <script>
@@ -106,11 +112,16 @@ export default {
 </script>
 
 <style scoped>
-@media screen and (min-width: 869px) {
+/* @media screen and (min-width: 869px) {
   #speaker {
     background-image: url(../../src/assets/images/Background/Bg_Speaker.png);
     background-size: cover;
     background-repeat: no-repeat;
+  }
+} */
+@media screen and (max-width: 869px) {
+  .hiddenbg {
+    display: none;
   }
 }
 </style>

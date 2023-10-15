@@ -56,6 +56,9 @@
       </div>
     </div>
   </section>
+  <div>
+      <img src="../assets/images/Background/Bgonlyup.png" alt="layerbg" class="w-full  mt-[-20%] hiddenbg">
+  </div>
 </template>
 
 <script>
@@ -69,5 +72,9 @@ export default {
 </script>
 
 <style scoped>
-/* CSS untuk membuat gambar menjadi persegi */
+@media screen and (max-width: 869px) {
+  .hiddenbg {
+    display: none;
+  }
+}
 </style>
