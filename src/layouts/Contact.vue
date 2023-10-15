@@ -50,7 +50,7 @@
           class=" mt-12 flex justify-center lg:justify-start text-center lg:text-start"
         >
           <p
-            class="font-regular font-monserrat text-center lg:text-start text-base text-black px-4 max-w-xl lg:text-lg"
+            class="font-regular font-monserrat text-center lg:text-start text-base text-black px-4 max-w-xl sm:ml-20 lg:ml-0 lg:text-lg"
           >
             “Berfokus pada menumbuh kembangkan industri digital serta
             transformasi masyarakat melalui Artificial Intelligence”

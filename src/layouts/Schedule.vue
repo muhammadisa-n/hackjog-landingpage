@@ -19,7 +19,7 @@
         </RouterLink>
       </div>
       <div
-        class="container w-full flex flex-wrap justify-between items-center sm:w-10/12 xl:w-10/12 mx-auto gap-x-10"
+        class="container w-full flex flex-wrap justify-between items-center sm:w-10/12 xl:w-10/12 mx-auto gap-x-10 sm:ml-36"
       >
         <!-- card section start -->
         <div v-for="data in datas" :key="data.index" class="flex mt-5 mb-5">
