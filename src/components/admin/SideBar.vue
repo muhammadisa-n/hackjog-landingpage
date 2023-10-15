@@ -120,7 +120,7 @@ export default {
     logout() {
       localStorage.setItem("authenticated", false);
       localStorage.removeItem("authenticated");
-      this.router.push({ name: "home" });
+      window.location.href = "/";
     },
   },
 };

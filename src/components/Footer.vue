@@ -57,7 +57,7 @@
             </li>
             <li>
               <a
-                href="https://www.youtube.com/"
+                href="https://www.whatsapp.com/"
                 target="_blank"
                 class="inline-block text-base hover:text-primary mb-3 mr-2 image-hover"
               >
@@ -87,9 +87,7 @@ const yearnow = new Date().getFullYear();
 </script>
 
 <style scoped>
-  .image-hover:hover img {
-    filter: brightness(0) grayscale(100%);
-  }
-
+.image-hover:hover img {
+  filter: brightness(0) grayscale(100%);
+}
 </style>
-

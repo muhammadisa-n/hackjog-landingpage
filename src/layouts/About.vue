@@ -8,7 +8,7 @@
               <iframe
                 width="100%"
                 height="300"
-                src="https://www.youtube.com/embed/ZrGNzazBb20?si=2TzRmdkdfIG9MjZe"
+                src="https://www.youtube.com/embed/s6jGBKLvRwo?si=m9XKrIb7S2JampOk"
                 title="YouTube video player"
                 frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture;"
@@ -65,7 +65,6 @@
     </div>
   </section>
 </template>
-
 
 <script>
 import { Swiper, SwiperSlide } from "swiper/vue";

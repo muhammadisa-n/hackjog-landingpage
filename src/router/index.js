@@ -6,10 +6,13 @@ import LoginView from "../views/Login.vue";
 import PageNotFound from "../views/NotFound.vue";
 import AdminPage from "../views/admin/Dashboard/index.vue";
 import AdminBanner from "../views/admin/Banner/index.vue";
+import AdminBannerCreate from "../views/admin/Banner/create.vue";
 import AdminSpeaker from "../views/admin/Speaker/index.vue";
 import AdminVenue from "../views/admin/Venue/index.vue";
 import adminSchedule from "../views/admin/Schedule/index.vue";
+import adminScheduleCreate from "../views/admin/Schedule/create.vue";
 import AdminPartner from "../views/admin/Partner/index.vue";
+import AdminPartnerCreate from "../views/admin/Partner/create.vue";
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -30,7 +33,7 @@ const router = createRouter({
       component: AllEvents,
     },
     {
-      path: "/login",
+      path: "/admin/login",
       name: "login",
       component: LoginView,
     },
@@ -45,6 +48,11 @@ const router = createRouter({
       component: AdminBanner,
     },
     {
+      path: "/admin/banner/create",
+      name: "adminbannercreate",
+      component: AdminBannerCreate,
+    },
+    {
       path: "/admin/speakers",
       name: "adminSpeakers",
       component: AdminSpeaker,
@@ -55,6 +63,11 @@ const router = createRouter({
       component: adminSchedule,
     },
     {
+      path: "/admin/schedule/create",
+      name: "adminschedulecreate",
+      component: adminScheduleCreate,
+    },
+    {
       path: "/admin/venue",
       name: "adminVenues",
       component: AdminVenue,
@@ -63,6 +76,11 @@ const router = createRouter({
       path: "/admin/ecopartner",
       name: "adminPartner",
       component: AdminPartner,
+    },
+    {
+      path: "/admin/partner/create",
+      name: "adminpartnercreate",
+      component: AdminPartnerCreate,
     },
     {
       path: "/:pathMatch(.*)*",

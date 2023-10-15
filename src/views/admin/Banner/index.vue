@@ -4,12 +4,13 @@
     <div class="flex h-screen rounded bg-gray-50 dark:bg-gray-800">
       <div class="w-full mt-3">
         <h1 class="text-3xl mt-5">Banner Page</h1>
-        <button
+        <RouterLink
+          :to="{ name: 'adminbannercreate' }"
           type="button"
           class="mt-10 focus:outline-none text-white bg-primary hover:bg-purple-800 focus:ring-4 focus:ring-purple-300 font-medium rounded-lg text-sm px-5 py-2.5 mb-2"
         >
           + Add Banner
-        </button>
+        </RouterLink>
 
         <h2 class="text-3xl font-semibold font-monserrat mx-auto">
           <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
@@ -42,11 +43,13 @@
                     <img :src="item.url" alt="" class="w-20 h-10" />
                   </td>
                   <td class="px-6 py-4">
-                    <a
+                    <button
+                      @click="deleteBanner(item.id)"
                       href="#"
                       class="font-medium text-blue-600 dark:text-blue-500 hover:underline"
-                      >Delete</a
                     >
+                      Delete
+                    </button>
                   </td>
                 </tr>
               </tbody>
@@ -62,11 +65,13 @@
 import axios from "axios";
 import { ref, onMounted } from "vue";
 import SideBar from "../../../components/admin/SideBar.vue";
+import { useRouter } from "vue-router";
 export default {
   components: { SideBar },
   setup() {
+    const router = useRouter();
     const dataBanner = ref([]);
-    onMounted(async () => {
+    const getAllBanner = async () => {
       try {
         const response = await axios.get(
           import.meta.env.VITE_BASE_URL_API + `banners`
@@ -75,8 +80,18 @@ export default {
       } catch (error) {
         console.error("Gagal mengambil data dari API:", error);
       }
+    };
+    onMounted(() => {
+      getAllBanner();
     });
-    return { SideBar, dataBanner };
+    const deleteBanner = async (id) => {
+      await axios
+        .delete(import.meta.env.VITE_BASE_URL_API + `banners/${id}`)
+        .then((response) => {
+          getAllBanner();
+        });
+    };
+    return { SideBar, dataBanner, deleteBanner, router };
   },
 };
 </script>
