@@ -1,12 +1,4 @@
 <template>
-  <!-- <section
-    id="register"
-    class="pt-48 pb-32 lg:pt-48 bg-cover bg-no-repeat"
-    style="
-      background-image: url(../../src/assets/images/Bg_Rg.png);
-      background-position: center top -30px;
-    "
-  > -->
   <section
     id="registration"
     class="pt-48 pb-32 lg:pt-48 lg:bg-cover lg:bg-no-repeat bg-gradient-to-b from-primary to-gradasi"
@@ -37,7 +29,7 @@ export default {
 };
 </script>
 <style scoped>
-@media screen and (min-width: 769px) {
+@media screen and (min-width: 869px) {
   #registration {
     background-image: url(../../src/assets/images/Background/Bg_Registration.png);
     background-position: center top -30px;

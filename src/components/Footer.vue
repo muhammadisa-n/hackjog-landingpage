@@ -1,5 +1,5 @@
 <template>
-  <footer class="bg-gradient-to-b from-primary to-gradasi pt-10 pb-12 lg:mt-20">
+  <footer class="bg-gradient-to-b from-primary to-gradasi pt-10 pb-12 max-[320px]:mt-52 md:mt-0 lg:mt-0">
     <div class="container">
       <div class="flex flex-wrap md:justify-between">
         <div

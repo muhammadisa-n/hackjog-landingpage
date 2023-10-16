@@ -11,12 +11,12 @@
         </div>
       </div>
       <div class="w-11/12 flex">
-        <RouterLink
-          :to="{ name: 'allevents' }"
+        <a
+          :href="'/allevents'"
           class="sm:ml-auto lg:ml-auto ml-4 mb-4 bg-primary rounded-md text-white ring-1 font-semibold px-1 py-1 hover:bg-gradasi hover:text-white hover:outline-none hover:ring-2 hover:ring-primary"
         >
           Lihat Semua
-        </RouterLink>
+      </a>
       </div>
       <div
         class="container w-full flex flex-wrap justify-between items-center sm:w-10/12 xl:w-10/12 mx-auto gap-x-10 sm:ml-36"

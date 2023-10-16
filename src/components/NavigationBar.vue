@@ -4,16 +4,13 @@
       <div
         class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4 h-20"
       >
-        <RouterLink
-          :to="{ name: 'home' }"
-          class="font- font-monserrat text-lg text-white block"
-        >
+      <a :href="'/#home'" class="flex items-center">
           <img
             src="../assets/images/logo.png"
             class="h-8 mr-3"
             alt="Hackgov Logo"
           />
-        </RouterLink>
+        </a>
         <button
           data-collapse-toggle="navbar-dropdown"
           type="button"
@@ -42,19 +39,20 @@
           <ul
             class="flex flex-col font-medium lg:p-0 mt-4 border border-white rounded-lg bg-primary lg:flex-row lg:space-x-8 lg:mt-0 lg:border-0"
           >
-            <li>
-              <RouterLink
-                :to="{ name: 'home', hash: '#home' }"
+          <li>
+              <a
+              :href="'/#home'"
                 class="block py-2 pl-3 pr-4 text-white bg-gradasi rounded lg:bg-transparent lg:text-white lg:hover:text-dark lg:p-0 lg:mt-2 lg:mx-4"
                 aria-current="page"
-                >Home</RouterLink
+                >Home</a
               >
             </li>
             <li>
-              <RouterLink
-                :to="{ name: 'home', hash: '#about' }"
+              <a
+              :href="'/#about'"
                 class="block py-2 pl-3 pr-4 text-white rounded hover:bg-gradasi lg:hover:bg-transparent lg:border-0 lg:hover:text-dark lg:p-0 lg:mt-2 lg:mx-4"
-                >About</RouterLink
+                aria-current="page"
+                >About</a
               >
             </li>
             <li>
@@ -89,44 +87,45 @@
                   class="py-2 text-sm text-gray-700 dark:text-gray-400"
                   aria-labelledby="dropdownLargeButton"
                 >
-                  <li>
-                    <RouterLink
-                      :to="{ name: 'home', hash: '#speaker' }"
+                <li>
+                    <a
+                    :href="'/#speaker'"
                       class="block px-4 py-2 hover:bg-gradasi text-white lg:hover:text-dark"
-                      >Speaker</RouterLink
+                      >Speaker</a
                     >
                   </li>
                   <li>
-                    <RouterLink
-                      :to="{ name: 'home', hash: '#schedule' }"
+                    <a
+                    :href="'/#schedule'"
                       class="block px-4 py-2 hover:bg-gradasi text-white lg:hover:text-dark"
-                      >Schedule</RouterLink
+                      >Schedule</a
                     >
                   </li>
                   <li>
-                    <RouterLink
-                      :to="{ name: 'home', hash: '#venue' }"
+                    <a
+                    :href="'/#venue'"
                       class="block px-4 py-2 hover:bg-gradasi text-white lg:hover:text-dark"
-                      >Venue</RouterLink
+                      >Venue</a
                     >
                   </li>
                 </ul>
               </div>
             </li>
             <li>
-              <RouterLink
-                :to="{ name: 'home', hash: '#contact' }"
+              <a
+                :href="'/#contact'"
                 class="block py-2 pl-3 pr-4 text-white rounded hover:bg-gradasi lg:hover:bg-transparent lg:border-0 lg:hover:text-dark lg:p-0 lg:mt-2 lg:mx-4"
-                >Contact</RouterLink
+                >Contact</a
               >
             </li>
             <li class="my-4 mx-4 lg:my-0 lg:mx-0">
+              <a :href="'/registration'">
               <button
-                @click="$router.push('registration')"
                 class="bg-white rounded-full text-primary ring-1 font-semibold px-2 py-2 w-full lg:w-30 hover:bg-gradasi hover:text-white hover:outline-none hover:ring-2 hover:ring-primary"
               >
                 Registration
               </button>
+            </a>
             </li>
           </ul>
         </div>
