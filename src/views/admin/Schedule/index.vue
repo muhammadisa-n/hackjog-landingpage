@@ -15,7 +15,7 @@
         <h2 class="text-3xl font-semibold font-monserrat mx-auto">
           <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
             <table
-              class="w-full text-sm text-left text-gray-500 dark:text-gray-400 mt-5 mb-10"
+              class="w-full text-sm text-left text-gray-500 dark:text-gray-400 mt-3 mb-10"
             >
               <thead
                 class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400"
@@ -61,6 +61,15 @@
                     >
                       Delete
                     </button>
+                  </td>
+                </tr>
+                <tr>
+                  <td
+                    v-if="dataSchedule.length === 0"
+                    colspan="6"
+                    class="px-6 py-4 text-center"
+                  >
+                    Data Kosong
                   </td>
                 </tr>
               </tbody>

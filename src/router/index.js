@@ -8,7 +8,9 @@ import AdminPage from "../views/admin/Dashboard/index.vue";
 import AdminBanner from "../views/admin/Banner/index.vue";
 import AdminBannerCreate from "../views/admin/Banner/create.vue";
 import AdminSpeaker from "../views/admin/Speaker/index.vue";
+import AdminSpeakerCreate from "../views/admin/Speaker/create.vue";
 import AdminVenue from "../views/admin/Venue/index.vue";
+import AdminVenueCreate from "../views/admin/Venue/create.vue";
 import adminSchedule from "../views/admin/Schedule/index.vue";
 import adminScheduleCreate from "../views/admin/Schedule/create.vue";
 import AdminPartner from "../views/admin/Partner/index.vue";
@@ -58,6 +60,11 @@ const router = createRouter({
       component: AdminSpeaker,
     },
     {
+      path: "/admin/speakers/create",
+      name: "adminspeakercreate",
+      component: AdminSpeakerCreate,
+    },
+    {
       path: "/admin/schedule",
       name: "adminSchedule",
       component: adminSchedule,
@@ -71,6 +78,11 @@ const router = createRouter({
       path: "/admin/venue",
       name: "adminVenues",
       component: AdminVenue,
+    },
+    {
+      path: "/admin/venue/create",
+      name: "adminvenuecreate",
+      component: AdminVenueCreate,
     },
     {
       path: "/admin/ecopartner",

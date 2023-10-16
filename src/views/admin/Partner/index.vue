@@ -24,7 +24,6 @@
                   <th scope="col" class="px-6 py-3">Name</th>
                   <th scope="col" class="px-6 py-3">Image</th>
                   <th scope="col" class="px-6 py-3">Action</th>
-                  <th scope="col" class="px-6 py-3"></th>
                 </tr>
               </thead>
               <tbody>
@@ -33,12 +32,12 @@
                   :key="item.id"
                   class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600"
                 >
-                  <th
+                  <td
                     scope="row"
                     class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
                   >
                     {{ item.nama }}
-                  </th>
+                  </td>
                   <td class="px-6 py-4">
                     <img :src="item.url" alt="" class="w-20 h-10" />
                   </td>
@@ -50,6 +49,15 @@
                     >
                       Delete
                     </button>
+                  </td>
+                </tr>
+                <tr>
+                  <td
+                    v-if="dataPartner.length === 0"
+                    colspan="3"
+                    class="px-6 py-4 text-center"
+                  >
+                    Data Kosong
                   </td>
                 </tr>
               </tbody>
