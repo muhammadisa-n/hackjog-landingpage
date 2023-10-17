@@ -31,8 +31,7 @@
       <div class="h-full px-3 py-4 overflow-y-auto bg-gray-50 dark:bg-gray-800">
         <ul class="space-y-2 font-medium">
           <li>
-            <RouterLink
-              :to="{ name: 'adminIndex' }"
+            <a :href="'/admin'"
               class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
             >
               <svg
@@ -50,49 +49,49 @@
                 />
               </svg>
               <span class="ml-3">Dashboard</span>
-            </RouterLink>
+            </a>
           </li>
           <li>
-            <RouterLink
-              :to="{ name: 'adminBanner' }"
+            <a
+              :href="'/admin/banner' "
               class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
             >
               <span class="flex-1 ml-3 whitespace-nowrap">Banner</span>
-            </RouterLink>
+            </a>
           </li>
           <li>
-            <RouterLink
-              :to="{ name: 'adminSpeakers' }"
+            <a
+              :href="'/admin/speakers'"
               class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
             >
               <span class="flex-1 ml-3 whitespace-nowrap">Speakers</span>
-            </RouterLink>
+            </a>
           </li>
           <li>
-            <RouterLink
-              :to="{ name: 'adminVenues' }"
+            <a
+              :href="'/admin/venue'"
               class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
             >
               <span class="flex-1 ml-3 whitespace-nowrap">Venues</span>
-            </RouterLink>
+            </a>
           </li>
           <li>
-            <RouterLink
-              :to="{ name: 'adminSchedule' }"
+            <a
+              :href="'/admin/schedule'"
               class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
             >
               <span class="flex-1 ml-3 whitespace-nowrap">Schedule</span>
-            </RouterLink>
+            </a>
           </li>
           <li>
-            <RouterLink
-              :to="{ name: 'adminPartner' }"
+            <a
+              :href="'/admin/ecopartner'"
               class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
             >
               <span class="flex-1 ml-3 whitespace-nowrap"
                 >Ecosystem Partner</span
               >
-            </RouterLink>
+            </a>
           </li>
           <li>
             <button
