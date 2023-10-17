@@ -20,10 +20,10 @@
         <div class="mb-8">
         <select id="typeins" class="block w-full p-4 bg-gray-100 border border-gray-300 text-black text-md rounded-lg focus:ring-primary focus:border-primary" required>
           <option value="">-- Select Institution Type --</option>
-          <option value="">United States</option>
-          <option value="">Canada</option>
-          <option value="">France</option>
-          <option value="">Germany</option>
+          <option value="school">School</option>
+          <option value="university">University</option>
+          <option value="government">Government</option>
+          <option value="other">Other</option>
         </select>
         </div>
         <div class="mb-8">
@@ -32,19 +32,23 @@
         <div class="mb-8">
         <select id="typeinv" class="block w-full p-4 bg-gray-100 border border-gray-300 text-black text-md rounded-lg focus:ring-primary focus:border-primary" required>
           <option value="">-- Select Type of Invitation --</option>
-          <option value="">United States</option>
-          <option value="">Canada</option>
-          <option value="">France</option>
-          <option value="">Germany</option>
+          <option value="actinvit">Activity Invitations</option>
+          <option value="noactinvit">No Activity Invitations</option>
+          <option value="other">Other</option>
         </select>
         </div>
         <div class="mb-8">
         <select id="interest" class="block w-full p-4 bg-gray-100 border border-gray-300 text-black text-md rounded-lg focus:ring-primary focus:border-primary" required>
           <option value="">-- Choose of Interest --</option>
-          <option value="">United States</option>
-          <option value="">Canada</option>
-          <option value="">France</option>
-          <option value="">Germany</option>
+          <option value="programming">Programming</option>
+          <option value="web-development">Web Development</option>
+          <option value="mobile-apps">Mobile Apps</option>
+          <option value="data-science">Data Science</option>
+          <option value="artificial-intelligence">Artificial Intelligence</option>
+          <option value="blockchain">Blockchain</option>
+          <option value="cybersecurity">Cybersecurity</option>
+          <option value="gadgets">Gadgets</option>
+          <option value="other-tech">Other (Tech)</option>
         </select>
         </div>
         <div class="flex items-center mb-8">
