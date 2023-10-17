@@ -15,6 +15,7 @@ import adminSchedule from "../views/admin/Schedule/index.vue";
 import adminScheduleCreate from "../views/admin/Schedule/create.vue";
 import AdminPartner from "../views/admin/Partner/index.vue";
 import AdminPartnerCreate from "../views/admin/Partner/create.vue";
+import adminUserParticipant from "../views/admin/User/index.vue";
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -95,6 +96,11 @@ const router = createRouter({
       component: AdminPartnerCreate,
     },
     {
+      path: "/admin/userparticipant",
+      name: "adminUserParticipant",
+      component: adminUserParticipant,
+    },
+    {
       path: "/:pathMatch(.*)*",
       name: "notfound",
       component: PageNotFound,
@@ -131,6 +137,9 @@ router.beforeEach((to, from, next) => {
     next({ name: "login" });
   }
   if (to.name === "adminPartner" && !isAuthenticated) {
+    next({ name: "login" });
+  }
+  if (to.name === "adminUserParticipant" && !isAuthenticated) {
     next({ name: "login" });
   }
   if (to.name === "login" && isAuthenticated) {

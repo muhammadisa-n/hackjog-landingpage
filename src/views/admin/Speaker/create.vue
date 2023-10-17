@@ -102,7 +102,6 @@ export default {
       await axios
         .post(import.meta.env.VITE_BASE_URL_API + `speakers`, formdata)
         .then((response) => {
-          console.log(response);
           router.push({ path: "/admin/speakers" });
         })
         .catch((error) => {

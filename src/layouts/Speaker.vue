@@ -1,11 +1,15 @@
 <template>
   <section
     id="speaker"
-    class="pt-12 pb-12 lg:pt-36 sm:pb-16 lg:pt-36 lg:pb-16 mt-32 bg-gradient-to-b from-primary to-gradasi"
+    class="pt-12 pb-12 sm:pb-16 lg:pt-36 lg:pb-16 mt-32 bg-gradient-to-b from-primary to-gradasi"
   >
-  <div>
-      <img src="../assets/images/Background/Bgonlyup.png" alt="layerbg" class="w-full  mt-[-25%] hiddenbg">
-  </div>
+    <div>
+      <img
+        src="../assets/images/Background/Bgonlyup.png"
+        alt="layerbg"
+        class="w-full mt-[-25%] hiddenbg"
+      />
+    </div>
     <div class="container lg:mb-44">
       <div class="w-full px-4">
         <div class="max-w-xl mx-auto text-center mb-16">
@@ -55,7 +59,11 @@
     </div>
   </section>
   <div>
-      <img src="../assets/images/Background/Bgonlydw.png" alt="layerbg" class="w-full  mt-[-25%] hiddenbg">
+    <img
+      src="../assets/images/Background/Bgonlydw.png"
+      alt="layerbg"
+      class="w-full mt-[-25%] hiddenbg"
+    />
   </div>
 </template>
 

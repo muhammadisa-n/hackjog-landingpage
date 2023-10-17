@@ -31,7 +31,8 @@
       <div class="h-full px-3 py-4 overflow-y-auto bg-gray-50 dark:bg-gray-800">
         <ul class="space-y-2 font-medium">
           <li>
-            <a :href="'/admin'"
+            <a
+              :href="'/admin'"
               class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
             >
               <svg
@@ -53,7 +54,7 @@
           </li>
           <li>
             <a
-              :href="'/admin/banner' "
+              :href="'/admin/banner'"
               class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
             >
               <span class="flex-1 ml-3 whitespace-nowrap">Banner</span>
@@ -90,6 +91,16 @@
             >
               <span class="flex-1 ml-3 whitespace-nowrap"
                 >Ecosystem Partner</span
+              >
+            </a>
+          </li>
+          <li>
+            <a
+              :href="'/admin/userparticipant'"
+              class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
+            >
+              <span class="flex-1 ml-3 whitespace-nowrap"
+                >User Participant list</span
               >
             </a>
           </li>
