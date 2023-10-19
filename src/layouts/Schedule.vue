@@ -65,7 +65,7 @@ export default {
     const getAllSchedule = async () => {
       try {
         const response = await axios.get(
-          import.meta.env.VITE_BASE_URL_API + `schedule?take=4`
+          import.meta.env.VITE_BASE_URL_API + `schedule?limit=4`
         ); // Ganti URL sesuai dengan API yang ingin Anda akses
         dataSchedule.value = response.data.data;
       } catch (error) {
