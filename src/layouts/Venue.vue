@@ -25,48 +25,43 @@
       <div
         class="grid grid-cols-2 grid-rows-2 gap-4 w-full px-4 mb-8 sm:mb-12 lg:mb-72 xl:w-10/12 xl:mx-auto"
       >
-        <div>
-          <img
-            src="../assets/images/Venue/img_vn1.png"
-            alt="Gambar1"
-            class="hover:shadow-2xl"
-          />
-        </div>
-        <div>
-          <img
-            src="../assets/images/Venue/img_vn2.png"
-            alt="Gambar2"
-            class="hover:shadow-2xl"
-          />
-        </div>
-        <div>
-          <img
-            src="../assets/images/Venue/img_vn3.png"
-            alt="Gambar3"
-            class="hover:shadow-2xl"
-          />
-        </div>
-        <div>
-          <img
-            src="../assets/images/Venue/img_vn4.png"
-            alt="Gambar4"
-            class="hover:shadow-2xl"
-          />
+        <div v-for="item in dataVenue" :key="item.id">
+          <img :src="item.url" :alt="item.nama" class="hover:shadow-2xl" />
         </div>
       </div>
     </div>
   </section>
   <div>
-      <img src="../assets/images/Background/Bgonlyup.png" alt="layerbg" class="w-full  mt-[-20%] hiddenbg">
+    <img
+      src="../assets/images/Background/Bgonlyup.png"
+      alt="layerbg"
+      class="w-full mt-[-20%] hiddenbg"
+    />
   </div>
 </template>
 
 <script>
+import axios from "axios";
+import { ref, onMounted } from "vue";
 export default {
   name: "Venue",
   components: {},
   setup() {
-    return {};
+    const dataVenue = ref([]);
+    const getAllVenue = async () => {
+      try {
+        const response = await axios.get(
+          import.meta.env.VITE_BASE_URL_API + `venues`
+        ); // Ganti URL sesuai dengan API yang ingin Anda akses
+        dataVenue.value = response.data.data;
+      } catch (error) {
+        console.error("Gagal mengambil data dari API:", error);
+      }
+    };
+    onMounted(() => {
+      getAllVenue();
+    });
+    return { dataVenue };
   },
 };
 </script>

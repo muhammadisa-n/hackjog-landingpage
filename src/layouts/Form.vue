@@ -155,6 +155,7 @@
 import axios from "axios";
 import { ref } from "vue";
 import Swal from "sweetalert2";
+
 export default {
   name: "Form",
   components: {},
@@ -196,10 +197,7 @@ export default {
         });
       } else {
         await axios
-          .post(
-            import.meta.env.VITE_BASE_URL_API + `users/registration`,
-            formdata
-          )
+          .post(import.meta.env.VITE_BASE_URL_API + `users`, formdata)
           .then((response) => {
             Swal.fire({
               icon: "success",
@@ -211,7 +209,7 @@ export default {
             errorMessage.value = error.response.data.message;
             Swal.fire({
               icon: "error",
-              title: `${errorMessage}`,
+              title: `${errorMessage.value}`,
               showConfirmButton: false,
               timer: 1500,
             });

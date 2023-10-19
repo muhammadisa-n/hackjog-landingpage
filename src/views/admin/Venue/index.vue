@@ -74,6 +74,7 @@ import axios from "axios";
 import { ref, onMounted } from "vue";
 import SideBar from "../../../components/admin/SideBar.vue";
 import { useRouter } from "vue-router";
+import Swal from "sweetalert2";
 export default {
   components: { SideBar },
   setup() {
@@ -93,11 +94,24 @@ export default {
       getAllVenue();
     });
     const deleteVenue = async (id) => {
-      await axios
-        .delete(import.meta.env.VITE_BASE_URL_API + `venues/${id}`)
-        .then((response) => {
-          getAllVenue();
-        });
+      Swal.fire({
+        title: "Are you sure?",
+        text: "You won't be able to revert this!",
+        icon: "warning",
+        showCancelButton: true,
+        confirmButtonColor: "#3085d6",
+        cancelButtonColor: "#d33",
+        confirmButtonText: "Yes, delete it!",
+      }).then(async (result) => {
+        if (result.isConfirmed) {
+          await axios
+            .delete(import.meta.env.VITE_BASE_URL_API + `venues/${id}`)
+            .then((response) => {
+              Swal.fire("Deleted!", "Your data has been deleted.", "success");
+              getAllVenue();
+            });
+        }
+      });
     };
     return { SideBar, dataVenue, deleteVenue, router };
   },

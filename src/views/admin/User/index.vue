@@ -53,15 +53,11 @@
                     {{ item.institution_type }}
                   </td>
                   <td class="px-6 py-4">
-                    {{ item.institution_type }}
-                  </td>
-                  <td class="px-6 py-4">
                     {{ item.type_invitation }}
                   </td>
                   <td class="px-6 py-4">
                     {{ item.interest }}
                   </td>
-
                   <td class="px-6 py-4">
                     <button
                       @click="deleteUser(item.id)"
@@ -94,6 +90,7 @@ import axios from "axios";
 import { ref, onMounted } from "vue";
 import SideBar from "../../../components/admin/SideBar.vue";
 import { useRouter } from "vue-router";
+import Swal from "sweetalert2";
 export default {
   components: { SideBar },
   setup() {
@@ -113,11 +110,24 @@ export default {
       getAllUser();
     });
     const deleteUser = async (id) => {
-      await axios
-        .delete(import.meta.env.VITE_BASE_URL_API + `users/${id}`)
-        .then((response) => {
-          getAllUser();
-        });
+      Swal.fire({
+        title: "Are you sure?",
+        text: "You won't be able to revert this!",
+        icon: "warning",
+        showCancelButton: true,
+        confirmButtonColor: "#3085d6",
+        cancelButtonColor: "#d33",
+        confirmButtonText: "Yes, delete it!",
+      }).then(async (result) => {
+        if (result.isConfirmed) {
+          await axios
+            .delete(import.meta.env.VITE_BASE_URL_API + `users/${id}`)
+            .then((response) => {
+              Swal.fire("Deleted!", "Your data has been deleted.", "success");
+              getAllUser();
+            });
+        }
+      });
     };
     return { SideBar, dataUser, deleteUser, router };
   },

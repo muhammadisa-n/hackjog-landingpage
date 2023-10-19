@@ -75,7 +75,10 @@ export default {
   },
   methods: {
     login() {
-      if (this.input.username === "admin" && this.input.password === "admin") {
+      if (
+        this.input.username === "admin" &&
+        this.input.password === "hackjog321"
+      ) {
         localStorage.setItem("authenticated", true);
         this.router.push({ name: "adminIndex" });
       } else if (this.input.username === "" || this.input.password === "") {
@@ -83,7 +86,7 @@ export default {
         // alert("Username and password can not be empty");
       } else if (
         this.input.username !== "admin" ||
-        this.input.password !== "admin"
+        this.input.password !== "hackjog321"
       ) {
         this.$swal("Username Or password is wrong");
         // alert("Username Or password is wrong");

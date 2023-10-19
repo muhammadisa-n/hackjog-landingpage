@@ -9,42 +9,40 @@
           disableOnInteraction: false,
         }"
       >
-        <swiper-slide v-for="data in dataImage" :key="data.title">
-          <img :src="data.img" :alt="data.title" class="w-full" />
+        <swiper-slide v-for="item in dataBanner" :key="item.id">
+          <img :src="item.url" :alt="item.nama" class="w-full" />
         </swiper-slide>
       </swiper>
     </div>
   </section>
 </template>
 <script>
+import axios from "axios";
 import { Swiper, SwiperSlide } from "swiper/vue";
 import { Autoplay, Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
-import { ref } from "vue";
+import { ref, onMounted } from "vue";
 export default {
   name: "HomeSection",
   components: { Swiper, SwiperSlide },
   setup() {
-    const dataImage = ref([
-      {
-        title: "image 1",
-        img: new URL("@/assets/images/home/banner1.jpg", import.meta.url).href,
-      },
-      {
-        title: "image 2",
-        img: new URL("@/assets/images/home/banner2.png", import.meta.url).href,
-      },
-      {
-        title: "image 3",
-        img: new URL("@/assets/images/home/banner3.png", import.meta.url).href,
-      },
-      {
-        title: "image 4",
-        img: new URL("@/assets/images/home/banner4.png", import.meta.url).href,
-      },
-    ]);
-    return { modules: [Pagination, Autoplay], dataImage };
+    const dataBanner = ref([]);
+    const getAllBanner = async () => {
+      try {
+        const response = await axios.get(
+          import.meta.env.VITE_BASE_URL_API + `banners`
+        ); // Ganti URL sesuai dengan API yang ingin Anda akses
+        dataBanner.value = response.data.data;
+      } catch (error) {
+        console.error("Gagal mengambil data dari API:", error);
+      }
+    };
+
+    onMounted(() => {
+      getAllBanner();
+    });
+    return { modules: [Pagination, Autoplay], dataBanner };
   },
 };
 </script>

@@ -31,6 +31,7 @@
       >
         <swiper
           :modules="modules"
+          v-if="dataSpeakers.length > 3"
           :slides-per-view="3"
           :autoplay="{
             delay: 3000,
@@ -38,20 +39,100 @@
           }"
         >
           <swiper-slide
-            v-for="data in dataImage"
-            :key="data.title"
+            v-for="item in dataSpeakers"
+            :key="item.id"
             class="mb-12 p-4 md:w-1/3"
           >
-            <img :src="data.img" alt="Speaker" class="w-full h-full" />
+            <img :src="item.url" alt="Speaker" class="w-full h-full" />
             <h3
               class="font-semibold font-monserrat text-xs lg:text-2xl text-black lg:mt-5 lg:mb-3 text-center block"
             >
-              {{ data.nama }}
+              {{ item.nama }}
             </h3>
             <p
               class="font-semibold font-monserrat text-xs lg:text-xl text-white text-center"
             >
-              {{ data.nama_perusahaan }}
+              {{ item.nama_perusahaan }}
+            </p>
+          </swiper-slide>
+        </swiper>
+        <swiper
+          v-if="dataSpeakers.length === 3"
+          :modules="modules"
+          :slides-per-view="3"
+          :autoplay="{
+            delay: 3000,
+            disableOnInteraction: false,
+          }"
+        >
+          <swiper-slide
+            v-for="item in dataSpeakers"
+            :key="item.id"
+            class="mb-12 p-4 md:w-1/3"
+          >
+            <img :src="item.url" alt="Speaker" class="w-full h-full" />
+            <h3
+              class="font-semibold font-monserrat text-xs lg:text-2xl text-black lg:mt-5 lg:mb-3 text-center block"
+            >
+              {{ item.nama }}
+            </h3>
+            <p
+              class="font-semibold font-monserrat text-xs lg:text-xl text-white text-center"
+            >
+              {{ item.nama_perusahaan }}
+            </p>
+          </swiper-slide>
+        </swiper>
+        <swiper
+          v-if="dataSpeakers.length === 2"
+          :modules="modules"
+          :slides-per-view="2"
+          :autoplay="{
+            delay: 3000,
+            disableOnInteraction: false,
+          }"
+        >
+          <swiper-slide
+            v-for="item in dataSpeakers"
+            :key="item.id"
+            class="mb-12 p-4 md:w-1/3"
+          >
+            <img :src="item.url" alt="Speaker" class="w-full h-full" />
+            <h3
+              class="font-semibold font-monserrat text-xs lg:text-2xl text-black lg:mt-5 lg:mb-3 text-center block"
+            >
+              {{ item.nama }}
+            </h3>
+            <p
+              class="font-semibold font-monserrat text-xs lg:text-xl text-white text-center"
+            >
+              {{ item.nama_perusahaan }}
+            </p>
+          </swiper-slide>
+        </swiper>
+        <swiper
+          v-if="dataSpeakers.length === 1"
+          :modules="modules"
+          :autoplay="{
+            delay: 3000,
+            disableOnInteraction: false,
+          }"
+        >
+          <swiper-slide
+            v-for="item in dataSpeakers"
+            :key="item.id"
+            class="mb-12 p-4 md:w-1/3"
+          >
+            <img :src="item.url" alt="Speaker" class="w-full h-full" />
+            <h3
+              class="font-semibold font-monserrat text-xs lg:text-2xl text-black lg:mt-5 lg:mb-3 text-center block"
+            >
+              {{ item.nama }}
+            </h3>
+            <p
+              class="font-semibold font-monserrat text-xs lg:text-xl text-white text-center"
+            >
+              {{ item.nama_perusahaan }}
             </p>
           </swiper-slide>
         </swiper>
@@ -72,49 +153,26 @@ import { Swiper, SwiperSlide } from "swiper/vue";
 import { Autoplay, Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
-import { ref } from "vue";
+import axios from "axios";
+import { ref, onMounted } from "vue";
 export default {
   components: { Swiper, SwiperSlide },
   setup() {
-    const dataImage = ref([
-      {
-        nama: "Anggoro",
-        nama_perusahaan: "Kedata Online",
-        img: new URL("@/assets/images/Speaker/Anggoro.png", import.meta.url)
-          .href,
-      },
-      {
-        nama: "Arya Wiryawan",
-        nama_perusahaan: "Jala",
-        img: new URL(
-          "@/assets/images/Speaker/Arya Wiryawan.png",
-          import.meta.url
-        ).href,
-      },
-      {
-        nama: "Azmiansyah",
-        nama_perusahaan: "Morbis.id",
-        img: new URL("@/assets/images/Speaker/Azmiansyah.png", import.meta.url)
-          .href,
-      },
-      {
-        nama: "Galuh Koco Sadewo",
-        nama_perusahaan: "Botika",
-        img: new URL(
-          "@/assets/images/Speaker/Galuh Koco Sadewo.png",
-          import.meta.url
-        ).href,
-      },
-      {
-        nama: "Sabrang Noe Letto",
-        nama_perusahaan: "Symbolic.id",
-        img: new URL(
-          "@/assets/images/Speaker/Sabrang Noe Letto.png",
-          import.meta.url
-        ).href,
-      },
-    ]);
-    return { modules: [Pagination, Autoplay], dataImage };
+    const dataSpeakers = ref([]);
+    const getAllSpeaker = async () => {
+      try {
+        const response = await axios.get(
+          import.meta.env.VITE_BASE_URL_API + `speakers`
+        ); // Ganti URL sesuai dengan API yang ingin Anda akses
+        dataSpeakers.value = response.data.data;
+      } catch (error) {
+        console.error("Gagal mengambil data dari API:", error);
+      }
+    };
+    onMounted(() => {
+      getAllSpeaker();
+    });
+    return { modules: [Pagination, Autoplay], dataSpeakers };
   },
 };
 </script>
