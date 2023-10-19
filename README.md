@@ -1,6 +1,5 @@
-# Hackgov-landingpage
+# HackJog-landingpage
 
-[Live Demo](https://hackgov-landingpage.vercel.app/)
 
 ### Design LandingPage
 
